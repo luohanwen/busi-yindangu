@@ -1,3 +1,120 @@
 @import "../theme.less";
 @import "./var.less";
+@import (reference) "~@share/less/var.less";
 
+.ydg-page {
+    min-height: 100%;
+    background-color: white;
+    .ivu-layout {
+        background-color: white;
+    }
+}
+
+.ydg-content {
+    margin: 0 auto;
+    width: @main-width;
+}
+
+.line-clamp(@num) {
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: @num;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.banner {
+    .ivu-carousel-item {
+        position: relative;
+        .carousel-bg {
+            width: 1920px;
+            height: 640px;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            z-index: 100;
+        }
+        .main {
+            width: @main-width;
+            position: relative;
+            height: 640px;
+            box-sizing: border-box;
+            z-index: 200;
+            padding-top: 150px;
+            margin: 0 auto;
+            color: white;
+            .mainTitle {
+                font-size: 42px;
+            }
+            .subTitle {
+                font-size: 20px;
+                margin-top: 20px;
+            }
+            .btn {
+                width: 140px;
+                height: 58px;
+                line-height: 58px;
+                text-align: center;
+                font-size: 20px;
+                border: 1px solid white;
+                margin-top: 36px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.rollingDisplay {
+    margin-top: 30px;
+    .rolling-title {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: rgb(51, 51, 51);
+        .ivu-col {
+            border-right: 1px solid rgb(231, 229, 229);
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+    .rolling-content {
+        font-size: 14px;
+        color: rgb(51, 51, 51);
+        .ivu-col {
+            .line-clamp(2);
+            line-height: 1.6;
+        }
+    }
+}
+
+.tip1 {
+    text-align: center;
+    color: rgb(51, 51, 51);
+    margin-top: 100px;
+    .title {
+        font-size: 24px;
+    }
+    .desc {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+.tip2 {
+    margin: 70px 0;
+    font-size: 24px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+.cooperativePartner {
+    .ivu-col {
+        margin-bottom: 34px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

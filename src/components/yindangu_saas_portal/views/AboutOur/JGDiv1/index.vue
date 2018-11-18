@@ -1,5 +1,8 @@
 <template>
   <!-- 门户网站关于我们 -->
+  <div>
+      关于我们
+  </div>
 </template>
 <script>
   import vdk from 'v3-vdk';
