@@ -1,0 +1,12 @@
+﻿{
+  "Resources": [],
+  "Plugins": [
+    {
+      "PluginName": "v3-vdk",
+      "SymbolicName": "com.toone.v3.platform-vjs.framework.extension.platform.custom.resource.v3-vdk",
+      "Version": "1.1.0",
+      "Type": "V3ResourcePlugin",
+      "LibaryCode": "dev"
+    }
+  ]
+}

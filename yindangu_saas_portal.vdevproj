@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VdevprojInfo>
+    <Projects>
+        <ComponentCode>yindangu_saas_portal</ComponentCode>
+        <ComponentName>智企云门户网站</ComponentName>
+        <UpdateTime>2018-11-17 14:54:08</UpdateTime>
+        <CreatTime>2018-11-15 19:20:49</CreatTime>
+        <LastBuildTime>2018-11-17 13:25:03</LastBuildTime>
+        <LastBuildType>Template</LastBuildType>
+        <NodeModulesVersion>1.0.26</NodeModulesVersion>
+        <TemplatePath>D:\v3开发系统\开发库\20181012\DevSystem\Template</TemplatePath>
+        <TemplateLastModifyTime>2018-11-17 11:42:50</TemplateLastModifyTime>
+    </Projects>
+    <Components>
+        <VdevprojComponentInfo>
+            <Code>Product</Code>
+            <Name>产品</Name>
+        </VdevprojComponentInfo>
+        <VdevprojComponentInfo>
+            <Code>ProductExperience</Code>
+            <Name>产品体验</Name>
+        </VdevprojComponentInfo>
+        <VdevprojComponentInfo>
+            <Code>FreeTrial</Code>
+            <Name>免费试用</Name>
+        </VdevprojComponentInfo>
+        <VdevprojComponentInfo>
+            <Code>AboutOur</Code>
+            <Name>关于我们</Name>
+        </VdevprojComponentInfo>
+        <VdevprojComponentInfo>
+            <Code>DynamicsDetails</Code>
+            <Name>动态详情</Name>
+        </VdevprojComponentInfo>
+        <VdevprojComponentInfo>
+            <Code>test</Code>
+            <Name>图片测试样例（仅供参考）</Name>
+        </VdevprojComponentInfo>
+        <VdevprojComponentInfo>
+            <Code>CustomerService</Code>
+            <Name>客户服务</Name>
+        </VdevprojComponentInfo>
+        <VdevprojComponentInfo>
+            <Code>Case</Code>
+            <Name>案例</Name>
+        </VdevprojComponentInfo>
+        <VdevprojComponentInfo>
+            <Code>CaseDetails</Code>
+            <Name>案例详情</Name>
+        </VdevprojComponentInfo>
+        <VdevprojComponentInfo>
+            <Code>portal</Code>
+            <Name>门户框架</Name>
+        </VdevprojComponentInfo>
+        <VdevprojComponentInfo>
+            <Code>HomePage</Code>
+            <Name>首页</Name>
+        </VdevprojComponentInfo>
+    </Components>
+</VdevprojInfo>

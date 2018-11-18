@@ -1,0 +1,27 @@
+{
+	"name": "yindangu_saas_portal",
+	"version": "1.0.0",
+	"description": "自定义窗体",
+	"main": "index.js",
+	"scripts": {
+		"v3:start": "v3-start",
+		"v3:package": "v3-package",
+		"v3:config": "v3-config",
+		"v3:analyze": "v3-analyze",
+		"v3:install": "v3installer -i",
+		"v3:uninstall": "v3installer -u"
+	},
+	"author": "",
+	"license": "MIT",
+	"dependencies": {
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.4",
+		"babel-preset-es2015": "^6.24.1",
+		"js-beautify": "^1.7.5",
+		"juicer": "^0.6.15",
+		"v3webpack-cli": "^1.1.10",
+		"v3-platform-utils": "^1.0.36",
+		"v3-installer": "^1.0.47"
+	},
+	"devDependencies": {}
+}

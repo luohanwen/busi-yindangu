@@ -1,0 +1,1 @@
+var entities='[{"Code":"CaseDetails","Name":"案例详情","Columns":[{"Code":"details","Name":"详情","DataType":"char","Length":255,"Precision":null,"DefaultValue":"","Remark":""}]}]'

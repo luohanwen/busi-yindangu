@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实体详情</title>
+    <script src="entityMetaData.js"> </script>
+    <style>
+        table,
+        table tr th,
+        table tr td {
+            border: 1px solid rgba(192, 192, 192, 0.25);
+        }
+        th{
+            background-color: rgba(192, 192, 192, 0.19);
+        }
+        table {
+            width: 100%;
+            min-height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="entitiesShow"></div>
+    <script>
+        var entityData = JSON.parse(entities);
+        var tableHtml = "";
+        for (var en in entityData) {
+            tableHtml += "<p> 实体：" + entityData[en].Code + "(" + entityData[en].Name + ")</p>";
+            tableHtml += "<table>";
+            var thHtml = "<thead><tr>";
+            var tbHtml = "<tbody>";
+            var colsData = entityData[en].Columns;
+            var index = 0;
+            for (var col in colsData) {
+                var colObj = colsData[col];
+                tbHtml += "<tr>";
+                for (var colDetails in colObj) {
+                    if (index === 0)
+                        thHtml += "<th>" + colDetails + "</th>";
+                    tbHtml += "<td>" + colObj[colDetails] + "</td>";
+                }
+                index++;
+                tbHtml += "</tr>";
+            }
+            thHtml += "</tr></thead>";
+            tbHtml += "</tbody>";
+            tableHtml += thHtml;
+            tableHtml += tbHtml;
+            tableHtml += "</table>";
+        }
+        document.getElementById("entitiesShow").innerHTML = tableHtml;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+{
+  "CarouselPage": [
+    {
+      "img": "case_banner.png",
+      "mainTitle": "强强联手，共创新世界",
+      "subTitle": "丰富的案例 助长你与我"
+    }
+  ],
+  "CashList": [
+    {
+      "img": "case_photo.png",
+      "title": "科学的CRM管理工具，应从销售触发为销售管理服务。"
+    },
+    {
+      "img": "case_photo.png",
+      "title": "科学的CRM管理工具，应从销售触发为销售管理服务。"
+    },
+    {
+      "img": "case_photo.png",
+      "title": "科学的CRM管理工具，应从销售触发为销售管理服务。"
+    },
+    {
+      "img": "case_photo.png",
+      "title": "科学的CRM管理工具，应从销售触发为销售管理服务。"
+    },
+    {
+      "img": "case_photo.png",
+      "title": "科学的CRM管理工具，应从销售触发为销售管理服务。"
+    },
+    {
+      "img": "case_photo.png",
+      "title": "科学的CRM管理工具，应从销售触发为销售管理服务。"
+    },
+    {
+      "img": "case_photo.png",
+      "title": "科学的CRM管理工具，应从销售触发为销售管理服务。"
+    },
+    {
+      "img": "case_photo.png",
+      "title": "科学的CRM管理工具，应从销售触发为销售管理服务。"
+    }
+  ]
+}
