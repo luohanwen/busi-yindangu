@@ -1,15 +1,56 @@
 <template>
-    <Header class="ydg-header">
-        header
-    </Header>
+
+    <div>
+        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" text-color="#fff" background-color="#212433" active-text-color="#fff">
+            
+            <img src="~@share/img/logo.png" alt="" class="logo">
+
+            <el-menu-item index="1">首页</el-menu-item>
+            <el-submenu index="2">
+                <template slot="title">产品</template>
+                <el-menu-item index="2-1">产品概述</el-menu-item>
+                <el-menu-item index="2-2">免费试用</el-menu-item>
+                <el-submenu index="2-3">
+                    <template slot="title">产品体验</template>
+                    <el-menu-item index="2-3-1">HR管理</el-menu-item>
+                    <el-menu-item index="2-3-2">报销管理</el-menu-item>
+                    <el-menu-item index="2-3-3">合同管理</el-menu-item>
+                </el-submenu>
+            </el-submenu>
+            <el-menu-item index="3">案例</el-menu-item>
+            <el-menu-item index="4">客户服务</el-menu-item>
+            <el-menu-item index="5">关于我们</el-menu-item>
+
+            <div class="menu-right">
+                <div class="btn-menu">登录</div>
+                <div class="btn-menu">注册</div>
+            </div>
+        </el-menu>
+    </div>
+
 </template>
 <script>
-    export default {
-        name:"ydgHeader",
-        data(){
-            return {};
-        },
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
+import mockData from "./entities.json";
+export default {
+    name: "ydgHeader",
+    data() {
+        return {
+            activeIndex: "1",
+            NavBarList: mockData.NavBarList,
+            userInfo: mockData.userInfo
+        };
+    },
+    mounted() {
+        console.log();
+    },
+    methods: {
+        handleSelect(key, keyPath) {
+            console.log(key, keyPath);
+        }
     }
+};
 </script>
 <style lang="less" src="./theme.less" scoped></style>
 

@@ -4,3 +4,50 @@
     background-color: rgba(25,29,39,.2);
     z-index: 2000;
 }
+
+.el-menu{
+    // background-color:rgba(25,29,39,.2)!important;
+    padding-left: 150px;
+    position: fixed;
+    width: 100%;
+    z-index: 6000;
+    border-bottom: none;
+    .el-menu-item{
+        &.is-active{
+            border-bottom: none;
+            background-color: rgb(0,121,254)!important;
+            color: white;
+        }
+    }
+}
+
+.logo{
+    position: absolute;
+    top:50%;
+    left:20px;
+    transform: translateY(-50%);
+}
+
+.menu-right{
+    position: absolute;
+    right: 0;
+    top:0;
+    height: 100%;
+}
+
+.btn-menu{
+    width:80px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: white;
+    border:1px solid rgb(92,95,106);
+    margin-right: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 38px;
+    font-size: 14px;
+    &:hover{
+        background-color: rgb(0,121,254);
+    }
+}
