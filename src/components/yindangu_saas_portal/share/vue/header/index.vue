@@ -1,8 +1,8 @@
 <template>
 
     <div>
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" text-color="#fff" background-color="#212433" active-text-color="#fff">
-            
+        <el-menu :default-active="activeIndex" class="el-menu-ydg" mode="horizontal" @select="handleSelect" text-color="#fff" background-color="#212433" active-text-color="#fff">
+
             <img src="~@share/img/logo.png" alt="" class="logo">
 
             <el-menu-item index="1">首页</el-menu-item>
@@ -35,9 +35,14 @@ import "element-ui/lib/theme-chalk/index.css";
 import mockData from "./entities.json";
 export default {
     name: "ydgHeader",
+    props: {
+        activeIndex: {
+            type: String,
+            default: "1"
+        }
+    },
     data() {
         return {
-            activeIndex: "1",
             NavBarList: mockData.NavBarList,
             userInfo: mockData.userInfo
         };
@@ -52,5 +57,49 @@ export default {
     }
 };
 </script>
+<style lang="less">
+.el-menu-ydg.el-menu.el-menu--horizontal {
+    // background-color:rgba(25,29,39,.2)!important;
+    padding-left: 170px;
+    position: fixed;
+    width: 100%;
+    z-index: 6000;
+    border-bottom: none;
+    background-color: rgba(25, 29, 39, 0.8) !important;
+    & > .el-menu-item {
+        width: 110px;
+        text-align: center;
+        background-color: transparent !important;
+        &.is-active {
+            border-bottom: none;
+            background-color: rgb(0, 121, 254) !important;
+            color: white;
+        }
+    }
+    & > .el-submenu {
+        width: 110px;
+        text-align: center;
+        padding: 0 13px;
+        box-sizing: border-box;
+        & > .el-submenu__title {
+            background-color: transparent !important;
+        }
+        &.is-active {
+            border-bottom: none;
+            background-color: rgb(0, 121, 254) !important;
+            color: white;
+            & > .el-submenu__title {
+                border-bottom: none;
+                background-color: rgb(0, 121, 254) !important;
+                color: white;
+                .el-submenu__icon-arrow {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+</style>
+
 <style lang="less" src="./theme.less" scoped></style>
 

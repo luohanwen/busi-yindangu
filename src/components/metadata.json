@@ -1,118 +1,118 @@
 [
-  {
-    "name": "智企云门户网站",
-    "code": "yindangu_saas_portal",
-    "windows": [
-      {
-        "name": "产品",
-        "code": "Product",
-        "type": "vPlatformWebSkinVar",
-        "widgets": [
-          {
-            "code": "JGDiv1"
-          }
+    {
+        "name": "智企云门户网站",
+        "code": "yindangu_saas_portal",
+        "windows": [
+            {
+                "name": "产品",
+                "code": "Product",
+                "type": "vPlatformWebSkinVar",
+                "widgets": [
+                    {
+                        "code": "JGDiv1"
+                    }
+                ]
+            },
+            {
+                "name": "案例详情",
+                "code": "CaseDetails",
+                "type": "vPlatformWebSkinVar",
+                "widgets": [
+                    {
+                        "code": "JGDiv1"
+                    }
+                ]
+            },
+            {
+                "name": "案例",
+                "code": "Case",
+                "type": "vPlatformWebSkinVar",
+                "widgets": [
+                    {
+                        "code": "JGDiv1"
+                    }
+                ]
+            },
+            {
+                "name": "产品体验",
+                "code": "ProductExperience",
+                "type": "vPlatformWebSkinVar",
+                "widgets": [
+                    {
+                        "code": "JGDiv1"
+                    }
+                ]
+            },
+            {
+                "name": "免费试用",
+                "code": "FreeTrial",
+                "type": "vPlatformWebSkinVar",
+                "widgets": [
+                    {
+                        "code": "JGDiv1"
+                    }
+                ]
+            },
+            {
+                "name": "关于我们",
+                "code": "AboutOur",
+                "type": "vPlatformWebSkinVar",
+                "widgets": [
+                    {
+                        "code": "JGDiv1"
+                    }
+                ]
+            },
+            {
+                "name": "动态详情",
+                "code": "DynamicsDetails",
+                "type": "vPlatformWebSkinVar",
+                "widgets": [
+                    {
+                        "code": "JGDiv1"
+                    }
+                ]
+            },
+            {
+                "name": "图片测试样例（仅供参考）",
+                "code": "test",
+                "type": "vPlatformWebSkinVar",
+                "widgets": [
+                    {
+                        "code": "JGDiv1"
+                    }
+                ]
+            },
+            {
+                "name": "客户服务",
+                "code": "CustomerService",
+                "type": "vPlatformWebSkinVar",
+                "widgets": [
+                    {
+                        "code": "JGDiv1"
+                    }
+                ]
+            },
+            {
+                "name": "门户框架",
+                "code": "portal",
+                "type": "vPlatformWebSkinVar",
+                "widgets": [
+                    {
+                        "code": "JGDiv1"
+                    }
+                ]
+            },
+            {
+                "name": "首页",
+                "code": "HomePage",
+                "type": "vPlatformWebSkinVar",
+                "widgets": [
+                    {
+                        "code": "JGDiv1"
+                    }
+                ]
+            }
         ]
-      },
-      {
-        "name": "产品体验",
-        "code": "ProductExperience",
-        "type": "vPlatformWebSkinVar",
-        "widgets": [
-          {
-            "code": "JGDiv1"
-          }
-        ]
-      },
-      {
-        "name": "免费试用",
-        "code": "FreeTrial",
-        "type": "vPlatformWebSkinVar",
-        "widgets": [
-          {
-            "code": "JGDiv1"
-          }
-        ]
-      },
-      {
-        "name": "关于我们",
-        "code": "AboutOur",
-        "type": "vPlatformWebSkinVar",
-        "widgets": [
-          {
-            "code": "JGDiv1"
-          }
-        ]
-      },
-      {
-        "name": "动态详情",
-        "code": "DynamicsDetails",
-        "type": "vPlatformWebSkinVar",
-        "widgets": [
-          {
-            "code": "JGDiv1"
-          }
-        ]
-      },
-      {
-        "name": "图片测试样例（仅供参考）",
-        "code": "test",
-        "type": "vPlatformWebSkinVar",
-        "widgets": [
-          {
-            "code": "JGDiv1"
-          }
-        ]
-      },
-      {
-        "name": "客户服务",
-        "code": "CustomerService",
-        "type": "vPlatformWebSkinVar",
-        "widgets": [
-          {
-            "code": "JGDiv1"
-          }
-        ]
-      },
-      {
-        "name": "案例",
-        "code": "Case",
-        "type": "vPlatformWebSkinVar",
-        "widgets": [
-          {
-            "code": "JGDiv1"
-          }
-        ]
-      },
-      {
-        "name": "案例详情",
-        "code": "CaseDetails",
-        "type": "vPlatformWebSkinVar",
-        "widgets": [
-          {
-            "code": "JGDiv1"
-          }
-        ]
-      },
-      {
-        "name": "门户框架",
-        "code": "portal",
-        "type": "vPlatformWebSkinVar",
-        "widgets": [
-          {
-            "code": "JGDiv1"
-          }
-        ]
-      },
-      {
-        "name": "首页",
-        "code": "HomePage",
-        "type": "vPlatformWebSkinVar",
-        "widgets": [
-          {
-            "code": "JGDiv1"
-          }
-        ]
-      }
-    ]
-  }
+    }
 ]

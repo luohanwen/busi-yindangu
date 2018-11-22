@@ -3,17 +3,7 @@
     <div class="ydg-page">
         <Layout>
             <YdgHeader></YdgHeader>
-            <!-- 轮播图banner -->
-            <Carousel v-model="bannerValue" loop class="banner">
-                <CarouselItem v-for="item in CarouselPage">
-                    <img v-id2url:src="item.img" class="carousel-bg">
-                    <div class="main">
-                        <div class="mainTitle">{{item.mainTitle}}</div>
-                        <div class="subTitle">{{item.subTitle}}</div>
-                        <div class="btn">{{item.btnTitle}}</div>
-                    </div>
-                </CarouselItem>
-            </Carousel>
+            <YdgCarousel :CarouselPage="CarouselPage"></YdgCarousel>
             <Content>
                 <div class="ydg-container">
                     <RollingDisplay :RollingDisplay="RollingDisplay"></RollingDisplay>
@@ -51,6 +41,7 @@ import vdk from "v3-vdk";
 import entities from "./entities.js";
 import YdgFooter from "@share/vue/footer/index.vue";
 import YdgHeader from "@share/vue/header/index.vue";
+import YdgCarousel from "@share/vue/YdgCarousel/index.vue";
 import RollingDisplay from "@share/vue/rollingDisplay/index.vue";
 import TraitTabs from "@share/vue/TraitTabs/index.vue";
 import RightInfo from "@share/vue/rightInfo/index.vue";
@@ -59,12 +50,13 @@ export default {
     props: entities,
     data: function() {
         return {
-            bannerValue: 0
+
         };
     },
     components: {
         YdgFooter,
         YdgHeader,
+        YdgCarousel,
         RollingDisplay,
         TraitTabs,
         RightInfo

@@ -1,3 +1,79 @@
 @import "../theme.less";
 @import "./var.less";
+@import (reference) "~@share/less/var.less";
 
+.ydg-page {
+    position: relative;
+    min-height: 100%;
+    background-color: rgb(245, 245, 245);
+    .ivu-layout {
+        background-color: rgb(245, 245, 245);
+    }
+}
+
+.ydg-container {
+    margin: 0 auto;
+    width: @main-width;
+}
+
+.banner {
+    .ivu-carousel-item {
+        position: relative;
+        .carousel-bg {
+            width: 1920px;
+            height: 490px;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            z-index: 100;
+        }
+        .main {
+            width: @main-width;
+            position: relative;
+            height: 490px;
+            box-sizing: border-box;
+            z-index: 200;
+            padding-top: 190px;
+            margin: 0 auto;
+            color: white;
+            text-align: center;
+            .title{
+                font-size: 68px;
+            }
+            .desc{
+                font-size: 32px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.case-list{
+    margin-top:40px;
+    margin-bottom: 12px;
+    .case{
+        padding-top: 56px;
+        box-sizing: border-box;
+        height: 350px;
+        background-color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+        &:hover{
+            border-radius: 10px;
+            box-shadow: 0 4px 5px -3px rgb(216,217,219);  
+        }
+        img{
+            height: 130px;
+        }
+        .case-b{
+            margin-top: 60px;
+            text-align: left;
+            border-top: 1px solid rgb(236,236,236);
+            padding:20px 20px 0;
+            color: @main-color;
+            font-size: 18px;
+        }
+    }
+}
