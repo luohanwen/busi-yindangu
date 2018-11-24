@@ -12,7 +12,6 @@
             <YdgFooter></YdgFooter>
         </Layout>
         <BackTop></BackTop>
-        <RightInfo></RightInfo>
     </div>
 </template>
 <script>

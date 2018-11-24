@@ -1,67 +1,70 @@
 {
-  "ProductPrice": [
-    {
-      "type": "月付",
-      "price": "199",
-      "savePrice": "",
-      "monthPrice": "",
-      "fuction": "功能完整的现场服务管理，适用于任何规模的团队",
-      "service": "高网络高收发场景",
-      "isSpecial": ""
-    },
-    {
-      "type": "年付",
-      "price": "510",
-      "savePrice": "30",
-      "monthPrice": "199",
-      "fuction": "功能完整的现场服务管理，适用于任何规模的团队",
-      "service": "高网络高收发场景",
-      "isSpecial": ""
-    },
-    {
-      "type": "年付",
-      "price": "1999",
-      "savePrice": "399",
-      "monthPrice": "299",
-      "fuction": "功能完整的现场服务管理，适用于任何规模的团队",
-      "service": "高网络高收发场景",
-      "isSpecial": "True"
-    }
-  ],
-  "IntroducePageOne": [
-    {
-      "title": "营销云",
-      "img": "product_photo_0.png",
-      "content": "基于大数据驱动的AI营销平台为企业搭建从从营销到销售的端到\n端营销漏斗，扩大获客漏斗宽度、提升优质线索密度、加快商机\n转化速度，实现“+效率”、“+ROI”， 主力“营和销”的双赢。"
-    }
-  ],
-  "CarouselPage": [
-    {
-      "img": "product_banner.png",
-      "mainTitle": "灵活的开箱即用 体适能企业运营效率",
-      "subTitle": "自主搭配功能系统现装现用，解决传统失效、低于难题",
-      "btnTitle": "立即体验"
-    },
-    {
-      "img": "product_banner.png",
-      "mainTitle": "灵活的开箱即用 体适能企业运营效率",
-      "subTitle": "自主搭配功能系统现装现用，解决传统失效、低于难题",
-      "btnTitle": "立即体验"
-    }
-  ],
-  "UserPartner": [
-    {
-      "PartnerImg": "menu_photo_1.png"
-    },
-    {
-      "PartnerImg": "menu_photo_1.png"
-    },
-    {
-      "PartnerImg": "menu_photo_1.png"
-    },
-    {
-      "PartnerImg": "menu_photo_1.png"
-    }
-  ],
-  "IntroducePageTwo": []
+    "ProductPrice": [
+        {
+            "type": "月付",
+            "price": "199",
+            "savePrice": "",
+            "monthPrice": "",
+            "fuction": "功能完整的现场服务管理，适用于任何规模的团队",
+            "service": "高网络高收发场景",
+            "isSpecial": ""
+        },
+        {
+            "type": "季付",
+            "price": "510",
+            "savePrice": "30",
+            "monthPrice": "199",
+            "fuction": "功能完整的现场服务管理，适用于任何规模的团队",
+            "service": "高网络高收发场景",
+            "isSpecial": ""
+        },
+        {
+            "type": "年付",
+            "price": "1999",
+            "savePrice": "399",
+            "monthPrice": "299",
+            "fuction": "功能完整的现场服务管理，适用于任何规模的团队",
+            "service": "高网络高收发场景",
+            "isSpecial": "True"
+        }
+    ],
+    "IntroducePageOne": [
+        {
+            "title": "营销云",
+            "img": "product_photo_0.png",
+            "content": "基于大数据驱动的AI营销平台为企业搭建从从营销到销售的端到\n端营销漏斗，扩大获客漏斗宽度、提升优质线索密度、加快商机\n转化速度，实现“+效率”、“+ROI”， 主力“营和销”的双赢。"
+        }
+    ],
+    "CarouselPage": [
+        {
+            "img": "product_banner.png",
+            "mainTitle": "灵活的开箱即用 体适能企业运营效率",
+            "subTitle": "自主搭配功能系统现装现用，解决传统失效、低于难题",
+            "btnTitle": "立即体验"
+        },
+        {
+            "img": "product_banner.png",
+            "mainTitle": "灵活的开箱即用 体适能企业运营效率",
+            "subTitle": "自主搭配功能系统现装现用，解决传统失效、低于难题",
+            "btnTitle": "立即体验"
+        }
+    ],
+    "UserPartner": [
+        {
+            "PartnerImg": "menu_photo_1.png"
+        },
+        {
+            "PartnerImg": "menu_photo_1.png"
+        },
+        {
+            "PartnerImg": "menu_photo_1.png"
+        },
+        {
+            "PartnerImg": "menu_photo_1.png"
+        }
+    ],
+    "IntroducePageTwo": [
+        { "tabsName": "E-word基础版", "tabsContent": "tabsContent1" },
+        { "tabsName": "E-word增强版", "tabsContent": "tabsContent2" }
+    ]
 }

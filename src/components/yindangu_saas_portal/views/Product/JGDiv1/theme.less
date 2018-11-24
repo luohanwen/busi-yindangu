@@ -1,3 +1,123 @@
 @import "../theme.less";
 @import "./var.less";
 
+@import (reference) "~@share/less/var.less";
+
+.ydg-page {
+    position: relative;
+    min-height: 100%;
+    background-color: white;
+    .ivu-layout {
+        background-color: white;
+    }
+}
+
+.ydg-container {
+    margin: 0 auto;
+    width: @main-width;
+}
+
+.product-container {
+    background-color: rgb(69, 79, 130);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.tip1 {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.userpartner {
+    margin-top: 60px;
+    img {
+        height: 130px;
+        width: 100%;
+    }
+}
+
+.tip2 {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin-top: 110px;
+}
+
+.buy-list {
+    margin-top: 56px;
+    box-sizing: border-box;
+    position: relative;
+    .buy-item {
+        background-color: white;
+        height: 560px;
+        margin-bottom: 30px;
+        position: relative;
+        padding: 24px 30px 40px;
+        .title {
+            color: @main-color;
+            font-size: 30px;
+            text-align: center;
+        }
+        .price {
+            text-align: center;
+            height: 90px;
+            margin-top: 20px;
+            span {
+                color: rgb(160, 160, 160);
+                position: relative;
+                bottom: 20px;
+            }
+            .number {
+                display: inline-block;
+                font-size: 40px;
+                color: #ff9900;
+            }
+            .save {
+                text-align: center;
+                color: #999999;
+                font-size: 14px;
+                margin-top: 16px;
+                span{
+                    margin:0 5px;
+                }
+            }
+        }
+        .tip {
+            color: @main-color;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 38px;
+        }
+        .tip-content {
+            margin-top: 18px;
+            color: @main-color;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .btn-buy {
+            color: white;
+            font-size: 18px;
+            height: 42px;
+            line-height: 42px;
+            width: 200px;
+            text-align: center;
+            background-color: rgb(0, 121, 254);
+            cursor: pointer;
+            border-radius: 42px;
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            &:active {
+                background-color: darken(rgb(0, 121, 254), 10%);
+            }
+        }
+        .tag {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}
