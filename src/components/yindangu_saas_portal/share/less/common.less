@@ -1,0 +1,31 @@
+.mix-clearfix() {
+    &:before {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+//超过n行省略号
+.line-clamp(@num) {
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: @num;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.clearfix {
+    .mix-clearfix;
+}

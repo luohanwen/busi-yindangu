@@ -4,6 +4,16 @@
         "code": "yindangu_saas_portal",
         "windows": [
             {
+                "name": "关于我们",
+                "code": "AboutOur",
+                "type": "vPlatformWebSkinVar",
+                "widgets": [
+                    {
+                        "code": "JGDiv1"
+                    }
+                ]
+            },
+            {
                 "name": "免费试用",
                 "code": "FreeTrial",
                 "type": "vPlatformWebSkinVar",
@@ -46,16 +56,6 @@
             {
                 "name": "案例",
                 "code": "Case",
-                "type": "vPlatformWebSkinVar",
-                "widgets": [
-                    {
-                        "code": "JGDiv1"
-                    }
-                ]
-            },
-            {
-                "name": "关于我们",
-                "code": "AboutOur",
                 "type": "vPlatformWebSkinVar",
                 "widgets": [
                     {

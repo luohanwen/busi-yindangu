@@ -1,0 +1,70 @@
+@import (reference) "~@share/less/var.less";
+
+.banner {
+    position: relative;
+    .ivu-carousel-item {
+        position: relative;
+        .carousel-bg {
+            width: 1920px;
+            height: 490px;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            z-index: 100;
+        }
+        .main {
+            width: @main-width;
+            position: relative;
+            height: 490px;
+            box-sizing: border-box;
+            z-index: 200;
+            padding-top: 160px;
+            margin: 0 auto;
+            color: white;
+            text-align: center;
+            .mainTitle {
+                font-size: 42px;
+                color: rgb(84, 87, 130);
+                span {
+                    border-bottom: 1px solid rgb(84, 87, 130);
+                    padding-bottom: 6px;
+                }
+            }
+            .subTitle {
+                font-size: 42px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.nav {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    .item {
+        position: relative;
+        margin: 0 45px;
+        font-size: 18px;
+        color: white;
+        height: 34px;
+        .line {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-top: 4px solid rgb(0, 121, 254);
+            width: 50px;
+        }
+
+        &.active {
+            .line {
+                display: block;
+            }
+        }
+    }
+}
