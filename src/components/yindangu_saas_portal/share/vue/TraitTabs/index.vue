@@ -2,7 +2,7 @@
     <div class="traitTabs">
         <div class="ydg-container">
             <div class="tabs">
-                <div v-for="(tab,index) in TraitTabs" :class="['item',{'active':index === activeIndex}]" @click="slideTo(index)">
+                <div v-for="(tab,index) in TraitTabs" :class="['item',{'active':index === activeIndex}]" @mouseover="slideTo(index)">
                     <img v-id2url:src="tab.icon" alt="">
                     <p>{{tab.title}}</p>
                 </div>

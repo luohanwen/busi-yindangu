@@ -31,5 +31,19 @@ export default {
         });
 
         return val;
+    },
+    countDown(initValue, callback) {
+        let _timer = function() {
+            setTimeout(() => {
+                if (initValue < 0) {
+                    clearTimeout(_timer);
+                } else {
+                    initValue--;
+                    typeof callback === "function" && callback(initValue);
+                    _timer();
+                }
+            }, 1e3);
+        };
+        _timer();
     }
 };
