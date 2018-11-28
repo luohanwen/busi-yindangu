@@ -41,13 +41,88 @@
                     height: 48px;
                 }
             }
-            .introduce{
-                margin-top:20px;
+            .introduce {
+                margin-top: 20px;
                 font-size: 14px;
                 color: @main-color;
                 line-height: 1.8;
                 height: 134px;
                 overflow: hidden;
+            }
+        }
+    }
+}
+
+.course {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgb(245, 245, 245);
+    .ydg-slide.course-slide {
+        z-index: 1;
+        border: 1px solid rgb(203, 203, 203);
+        .ivu-menu-submenu-title {
+            border-right: none;
+        }
+    }
+    .course-content {
+        border: 1px solid rgb(203, 203, 203);
+        border-left: none;
+        color: @main-color;
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .time {
+            font-size: 14px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        .detail {
+            font-size: 14px;
+        }
+    }
+}
+
+.doc {
+    padding-top: 50px;
+    .doc-list {
+        font-size: 0;
+        .item {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 25%;
+            vertical-align: top;
+            position: relative;
+            padding-left: 60px;
+            padding-right: 60px;
+            margin-bottom: 50px;
+            .icon-snow {
+                position: absolute;
+                top: -4px;
+                left: 24px;
+            }
+            .item-r {
+                .title {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: @main-color;
+                }
+                ul {
+                    margin-top: 16px;
+                    list-style: none;
+                    border-top: 1px solid rgb(231,229,229);
+                    li {
+                        cursor: pointer;
+                        font-size: 14px;
+                        color: @main-color;
+                        border-bottom: 1px solid rgb(231,229,229);
+                        height: 40px;
+                        line-height: 40px;
+                        &:hover {
+                            color: rgb(0,121,254);
+                        }
+                    }
+                }
             }
         }
     }
