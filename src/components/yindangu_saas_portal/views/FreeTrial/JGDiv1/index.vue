@@ -70,9 +70,9 @@
                     prop="apply"
                   >
                     <Select v-model="formValidate.apply">
-                      <Option value="beijing">New York</Option>
-                      <Option value="shanghai">London</Option>
-                      <Option value="shenzhen">Sydney</Option>
+                      <Option value="1">人力资源管理</Option>
+                      <Option value="2">合同管理</Option>
+                      <Option value="3">费用管控与报销</Option>
                     </Select>
                   </FormItem>
                   <FormItem

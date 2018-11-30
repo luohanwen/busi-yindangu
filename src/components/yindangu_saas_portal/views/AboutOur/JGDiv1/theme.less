@@ -30,6 +30,7 @@
             color: @main-color;
             padding: 0 30px 50px;
             margin-top: 50px;
+            font-size: 14px;
         }
     }
     .intro-two {
@@ -40,11 +41,16 @@
 }
 
 .notice {
-    padding: 0 45px 50px 35px;
+    padding: 25px 45px 50px 35px;
     .notice-list {
         .item {
             display: flex;
-            margin-top: 50px;
+            margin-top: 25px;
+            padding-bottom:25px;
+            border-bottom: 1px solid rgb(228,228,228);
+            &:last-child{
+                border-bottom:none;
+            }
             .time {
                 width: 100px;
                 height: 100px;

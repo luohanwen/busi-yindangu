@@ -82,9 +82,13 @@
                     prop="companysize"
                   >
                     <Select v-model="formValidate.companysize">
-                      <Option value="beijing">New York</Option>
-                      <Option value="shanghai">London</Option>
-                      <Option value="shenzhen">Sydney</Option>
+                      <Option value="">请选择公司人数</Option>
+                      <Option value="1">0-15人</Option>
+                      <Option value="2">16-100人</Option>
+                      <Option value="3">101-200人</Option>
+                      <Option value="4">201-1000人</Option>
+                      <Option value="5">1001-2000人</Option>
+                      <Option value="6">2001人以上</Option>
                     </Select>
                   </FormItem>
                   <FormItem

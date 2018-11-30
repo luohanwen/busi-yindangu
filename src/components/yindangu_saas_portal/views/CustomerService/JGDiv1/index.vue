@@ -8,6 +8,7 @@
           @tabChange="tabChange"
           :navList="navList"
           :CarouselPage="CarouselPage"
+          navTitle="客户服务"
         ></SubMenu>
         <div class="subMenuContent">
           <!-- 服务体系介绍 -->
@@ -32,17 +33,18 @@
                   >
                   <div class="func">
                     <div class="title">{{func.title}}</div>
-                    <div class="icon"><img
+                    <div class="icon">
+                      <img
                         v-id2url:src="func.icon"
-                        alt=""
-                      ></div>
+                        alt
+                      >
+                    </div>
                     <div class="introduce">{{func.introduce}}</div>
                   </div>
                   </Col>
                 </Row>
               </div>
             </div>
-
           </div>
           <!-- 产品标准教程 -->
           <div
@@ -57,32 +59,30 @@
                   class="ydg-slide course-slide"
                 >
                   <Menu
-                    active-name="1-1"
+                    :active-name="initAcitveCourse"
                     theme="light"
                     width="auto"
-                    :open-names="['1']"
+                    :open-names="[newCourseList[0].id]"
+                    v-if="newCourseList.length"
                   >
-                    <Submenu name="1">
-                      <template slot="title">
-                        快速入门
-                      </template>
-                      <MenuItem name="1-1">使用流程</MenuItem>
-                      <MenuItem name="1-2">版本说明</MenuItem>
-                      <MenuItem name="1-3">常见问题</MenuItem>
-                    </Submenu>
-                    <Submenu name="2">
-                      <template slot="title">
-                        最佳实践
-                      </template>
-                      <MenuItem name="2-1">最佳实践</MenuItem>
-                    </Submenu>
-                    <Submenu name="3">
-                      <template slot="title">
-                        用户指南
-                      </template>
-                      <MenuItem name="3-1">接口类型</MenuItem>
-                      <MenuItem name="3-2">操作步骤</MenuItem>
-                    </Submenu>
+                    <template v-for="course in newCourseList">
+                      <Submenu
+                        :name="course.id"
+                        v-if="course.children && course.children.length>0"
+                      >
+                        <template slot="title">{{course.titile}}</template>
+                        <MenuItem
+                          :name="subCourse.id"
+                          v-for="subCourse in course.children"
+                          @click.native="selectCourse(subCourse)"
+                        >{{subCourse.titile}}</MenuItem>
+                      </Submenu>
+                      <MenuItem
+                        :name="course.id"
+                        @click.native="selectCourse(course)"
+                        v-else
+                      >{{course.titile}}</MenuItem>
+                    </template>
                   </Menu>
                 </Sider>
                 <Content
@@ -117,7 +117,7 @@
                 >
                   <img
                     src="~@share/img/icon_snow.png"
-                    alt=""
+                    alt
                     class="icon-snow"
                   >
                   <div class="item-r">
@@ -128,7 +128,8 @@
                         @click="handleDoc(subDoc)"
                       >{{subDoc.titile}}</li>
                     </ul>
-                    <div class="more">更多<Icon type="chevron-down"></Icon>
+                    <div class="more">更多
+                      <Icon type="chevron-down"></Icon>
                     </div>
                   </div>
                 </div>
@@ -171,6 +172,27 @@ export default {
       } else {
         return docList;
       }
+    },
+    newCourseList() {
+      let courseList = this.CourseList;
+      if (courseList.length > 0) {
+        console.log("courseList", Utils.toTree(courseList));
+        return Utils.toTree(courseList);
+      } else {
+        return courseList;
+      }
+    },
+    //默认教程
+    initAcitveCourse() {
+      let result = "";
+      let list = this.newCourseList;
+      if (this.newCourseList.length > 0) {
+        if (list[0].children && list[0].children.length) {
+          result = list[0].children[0].id;
+        } else {
+          result = list[0].id + "sub";
+        }
+      }
     }
   },
   components: {
@@ -188,7 +210,11 @@ export default {
     },
     //处理文档说明点击
     handleDoc(handleDoc) {
-      console.log("我点击文档", handleDoc);
+      alert("我点击了：" + JSON.stringify(handleDoc));
+    },
+    //教程菜单点击
+    selectCourse(course) {
+      alert("我点击了：" + JSON.stringify(course));
     }
   },
   filters: {}
