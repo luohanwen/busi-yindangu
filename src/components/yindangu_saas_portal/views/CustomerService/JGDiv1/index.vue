@@ -2,7 +2,7 @@
   <!-- 客户服务 -->
   <div class="ydg-page">
     <Layout>
-      <YdgHeader :activeIndex="'4'"></YdgHeader>
+      <YdgHeader :activeId="'4'"></YdgHeader>
       <content>
         <SubMenu
           @tabChange="tabChange"

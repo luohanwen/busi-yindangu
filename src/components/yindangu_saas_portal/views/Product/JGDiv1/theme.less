@@ -1,3 +1,5 @@
+@import "~@vPlatformWebSkinVar";
+@import "~@vPlatformBaseSkinVar";
 @import "../theme.less";
 @import "./var.less";
 
@@ -103,7 +105,7 @@
             line-height: 42px;
             width: 200px;
             text-align: center;
-            background-color: rgb(0, 121, 254);
+            background-color: @v-primary-color;
             cursor: pointer;
             border-radius: 42px;
             position: absolute;
@@ -111,7 +113,7 @@
             left: 50%;
             transform: translateX(-50%);
             &:active {
-                background-color: darken(rgb(0, 121, 254), 10%);
+                background-color: darken(@v-primary-color, 10%);
             }
         }
         .tag {

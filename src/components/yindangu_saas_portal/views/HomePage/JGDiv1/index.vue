@@ -2,7 +2,7 @@
     <!-- 门户网站首页 -->
     <div class="ydg-page">
         <Layout>
-            <YdgHeader></YdgHeader>
+            <YdgHeader :activeId="'1'"></YdgHeader>
             <YdgCarousel :CarouselPage="CarouselPage"></YdgCarousel>
             <Content>
                 <div class="ydg-container">

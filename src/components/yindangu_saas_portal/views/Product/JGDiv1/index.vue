@@ -2,7 +2,7 @@
     <!-- 门户网站产品 -->
     <div class="ydg-page">
         <Layout>
-            <YdgHeader :activeIndex="'2'"></YdgHeader>
+            <YdgHeader :activeId="'6'"></YdgHeader>
             <Content>
                 <YdgCarousel :CarouselPage="CarouselPage" :type="2"></YdgCarousel>
                 <!-- 产品介绍1 -->

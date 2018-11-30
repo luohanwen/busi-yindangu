@@ -2,7 +2,7 @@
     <!-- 门户网站案例详情 -->
     <div class="ydg-page">
         <Layout>
-            <YdgHeader :activeIndex="'3'"></YdgHeader>
+            <YdgHeader :activeId="'3'"></YdgHeader>
             <Content>
                 <div class="ydg-container">
                     <div class="detail" v-if="CaseDetails.length" v-html="CaseDetails[0].details">

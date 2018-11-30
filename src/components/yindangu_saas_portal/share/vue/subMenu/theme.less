@@ -1,3 +1,5 @@
+@import "~@vPlatformWebSkinVar";
+@import "~@vPlatformBaseSkinVar";
 @import (reference) "~@share/less/var.less";
 
 .banner {
@@ -50,14 +52,15 @@
 		margin: 0 45px;
 		font-size: 18px;
 		color: white;
-		height: 34px;
+        height: 34px;
+        cursor: pointer;
 		.line {
 			display: none;
 			position: absolute;
 			bottom: 0;
 			left: 50%;
 			transform: translateX(-50%);
-			border-top: 4px solid rgb(0, 121, 254);
+			border-top: 4px solid @v-primary-color;
 			width: 50px;
 		}
 
@@ -82,7 +85,7 @@
 		.item {
 			color: @main-color;
 			&.active {
-				color: rgb(0, 121, 254);
+				color: rgb(70, 99, 129);
 			}
 		}
 	}

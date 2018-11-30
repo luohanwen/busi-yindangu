@@ -2,7 +2,7 @@
   <!-- 门户网站关于我们 -->
   <div class="ydg-page">
     <Layout>
-      <YdgHeader :activeIndex="'5'"></YdgHeader>
+      <YdgHeader :activeId="'5'"></YdgHeader>
       <content>
         <SubMenu @tabChange="tabChange" :navList="navList" :CarouselPage="CarouselPage" navTitle="关于我们"></SubMenu>
         <div class="subMenuContent">

@@ -2,7 +2,7 @@
     <!-- 门户网站案例 -->
     <div class="ydg-page">
         <Layout>
-            <YdgHeader :activeIndex="'3'"></YdgHeader>
+            <YdgHeader :activeId="'3'"></YdgHeader>
             <Content>
                 <!-- 轮播图banner -->
                 <Carousel v-model="bannerValue" loop class="banner">
