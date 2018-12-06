@@ -57,13 +57,19 @@ export default {
     navTitle: {
       type: String,
       default: ""
+    },
+    //父组件内容发生变化
+    parentContentChange: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
     return {
       bannerValue: 0,
       localActiveTab: null,
-      isTop: false //是否固定再顶部
+      isTop: false, //是否固定在顶部
+      canFixTop: false //是否固定在顶部
     };
   },
   computed: {
@@ -71,26 +77,47 @@ export default {
       return this.localActiveTab || this.navList[0] || {};
     }
   },
-  created() {
+  mounted() {
     this.bindScroll();
+  },
+  watch: {
+    parentContentChange(val, oldValue) {
+      if (val) {
+        this.handleCanFixTop();
+      }
+    }
   },
   methods: {
     changeTab(tab) {
       this.localActiveTab = tab;
+      this.handleCanFixTop();
       this.$emit("tabChange", tab);
     },
+    handleCanFixTop() {
+      this.$nextTick(() => {
+        let winHeight = $(window).height();
+        let docHeight = $(document).height();
+        const diff = 500; //banner的高度
+        //如果banner隐藏后 页面高度还超出窗口高度既能滚动，才可将banner隐藏并固定菜单
+        this.canFixTop = !!(docHeight - winHeight > diff);
+      });
+    },
     bindScroll() {
+      let $win = $(window);
+
       $(window).on("scroll", () => {
-        console.log("submenu scroll");
-        let scrollTop = $(window).scrollTop();
-        if (this.isTop && scrollTop == 0) {
-          this.isTop = false;
-          //   显示顶部菜单
-          $(".el-menu-ydg").show();
-        } else if (!this.isTop && scrollTop > 340) {
-          this.isTop = true;
-          //   隐藏顶部菜单
-          $(".el-menu-ydg").hide();
+        if (this.canFixTop) {
+          let scrollTop = $win.scrollTop();
+
+          if (this.isTop && scrollTop == 0) {
+            this.isTop = false;
+            //   显示顶部菜单
+            $(".el-menu-ydg").show();
+          } else if (!this.isTop && scrollTop > 340) {
+            this.isTop = true;
+            //   隐藏顶部菜单
+            $(".el-menu-ydg").hide();
+          }
         }
       });
     }

@@ -9,37 +9,74 @@
       <Col span="6">最近案例</Col>
       <Col span="6">产品论道</Col>
     </Row>
-    <div class="swiper-container rollingDisplay-swiper">
-      <div class="swiper-wrapper">
-        <div
-          class="swiper-slide"
-          v-for="item in RollingDisplay"
-        >
-          <Row
-            type="flex"
-            :gutter="20"
-            class="rolling-content"
+
+    <Row
+      type="flex"
+      :gutter="20"
+      class="rolling-content"
+    >
+      <Col span="6">
+      <div class="swiper-container rollingDisplay-swiper-active">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide"
+            v-for="item in RollingDisplay"
           >
-            <Col span="6"><a
+            <a
               href=""
               target="_blank"
-            >{{item.active | limitWord}}</a></Col>
-            <Col span="6"><a
-              href=""
-              target="_blank"
-            >{{item.news | limitWord}}</a></Col>
-            <Col span="6"><a
-              href=""
-              target="_blank"
-            >{{item.cash | limitWord}}</a></Col>
-            <Col span="6"><a
-              href=""
-              target="_blank"
-            >{{item.product | limitWord}}</a></Col>
-          </Row>
+            >{{item.active | limitWord}}</a>
+          </div>
         </div>
       </div>
-    </div>
+      </Col>
+      <Col span="6">
+      <div class="swiper-container rollingDisplay-swiper-news">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide"
+            v-for="item in RollingDisplay"
+          >
+            <a
+              href=""
+              target="_blank"
+            >{{item.news | limitWord}}</a>
+          </div>
+        </div>
+      </div>
+      </Col>
+      <Col span="6">
+      <div class="swiper-container rollingDisplay-swiper-cash">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide"
+            v-for="item in RollingDisplay"
+          >
+            <a
+              href=""
+              target="_blank"
+            >{{item.cash | limitWord}}</a>
+          </div>
+        </div>
+      </div>
+      </Col>
+      <Col span="6">
+      <div class="swiper-container rollingDisplay-swiper-product">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide"
+            v-for="item in RollingDisplay"
+          >
+            <a
+              href=""
+              target="_blank"
+            >{{item.product | limitWord}}</a>
+          </div>
+        </div>
+      </div>
+      </Col>
+    </Row>
+
   </div>
 </template>
 <script>
@@ -62,15 +99,28 @@ export default {
   },
   methods: {
     initSwiper() {
-      let $swiper = $(".rollingDisplay-swiper");
-      let activeHight = $swiper.find(".swiper-slide").height();
-      $swiper.height(activeHight);
-      var mySwiper = new Swiper(".rollingDisplay-swiper", {
-        autoplay: true, //可选选项，自动滑动
+      let options = {
         direction: "vertical",
         loop: true,
-        autoHeight: true
-      });
+        autoHeight: true,
+        autoplay: { delay: 2000 }
+      };
+      this.initSwiperWithParams("rollingDisplay-swiper-active", options);
+      setTimeout(() => {
+        this.initSwiperWithParams("rollingDisplay-swiper-news", options);
+      }, 100);
+      setTimeout(() => {
+        this.initSwiperWithParams("rollingDisplay-swiper-cash", options);
+      }, 200);
+      setTimeout(() => {
+        this.initSwiperWithParams("rollingDisplay-swiper-product", options);
+      }, 300);
+    },
+    initSwiperWithParams(swiperClassName, options) {
+      let $swiper = $(`.${swiperClassName}`);
+      let activeHight = $swiper.find(".swiper-slide").height();
+      $swiper.height(activeHight);
+      var mySwiper = new Swiper(`.${swiperClassName}`, options);
     }
   },
   filters: {

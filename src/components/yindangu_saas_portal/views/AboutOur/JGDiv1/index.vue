@@ -9,6 +9,7 @@
           :navList="navList"
           :CarouselPage="CarouselPage"
           navTitle="关于我们"
+          :parentContentChange="contentChange"
         ></SubMenu>
         <div class="subMenuContent">
           <!-- 智企云 -->
@@ -211,7 +212,8 @@ export default {
         "施工项目智慧工地管理系统",
         "施工企业综合项目管理系统"
       ],
-      activeTab: {}
+      activeTab: {},
+      contentChange: false //内容发生变化
     };
   },
   computed: {
@@ -228,8 +230,13 @@ export default {
     RightInfo,
     SubMenu
   },
-  created() {
+  mounted() {
     this.activeTab = this.navList[0];
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.contentChange = true;
+      }, 500);
+    });
   },
   methods: {
     tabChange(tab) {

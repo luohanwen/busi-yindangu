@@ -9,6 +9,7 @@
           :navList="navList"
           :CarouselPage="CarouselPage"
           navTitle="客户服务"
+          :parentContentChange="contentChange"
         ></SubMenu>
         <div class="subMenuContent">
           <!-- 服务体系介绍 -->
@@ -161,7 +162,8 @@ export default {
         { title: "产品标准教程", key: "course" },
         { title: "产品标准文档", key: "doc" }
       ],
-      activeTab: {}
+      activeTab: {},
+      contentChange: false //内容发生变化，每变一次加1
     };
   },
   computed: {
@@ -201,8 +203,13 @@ export default {
     RightInfo,
     SubMenu
   },
-  created() {
+  mounted() {
     this.activeTab = this.navList[0];
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.contentChange = true;
+      }, 500);
+    });
   },
   methods: {
     tabChange(tab) {
