@@ -91,7 +91,13 @@ export default {
     changeTab(tab) {
       this.localActiveTab = tab;
       this.handleCanFixTop();
+      this.reset();
       this.$emit("tabChange", tab);
+    },
+    reset() {
+      this.isTop = false;
+      $(".el-menu-ydg").show();
+      $(window).scrollTop(0);
     },
     handleCanFixTop() {
       this.$nextTick(() => {

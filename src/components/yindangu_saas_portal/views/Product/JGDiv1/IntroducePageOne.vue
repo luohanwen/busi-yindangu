@@ -1,12 +1,12 @@
 <template>
-    <div class="ydg-container" v-if="IntroducePageOne.length">
+    <div class="ydg-container">
         <div class="introducePageOne">
             <div class="item">
-                <p class="title">{{IntroducePageOne[0].title}}</p>
-                <p class="content">{{IntroducePageOne[0].content}}</p>
+                <p class="title">{{IntroducePageOne.current.title}}</p>
+                <p class="content">{{IntroducePageOne.current.content}}</p>
             </div>
             <div class="item">
-                <img v-id2url:src="IntroducePageOne[0].img" alt="">
+                <img v-id2url:src="IntroducePageOne.current.img" alt="">
             </div>
         </div>
     </div>

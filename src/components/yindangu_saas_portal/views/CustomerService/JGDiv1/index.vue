@@ -20,8 +20,7 @@
             <div class="ydg-container">
               <div
                 class="desc"
-                v-if="ServiceSystemDescribe.length"
-                v-html="ServiceSystemDescribe[0].RichDescribe"
+                v-html="ServiceSystemDescribe.current.RichDescribe"
               ></div>
               <div
                 class="funcList"
@@ -92,13 +91,12 @@
                 >
                   <div
                     class="course-detail"
-                    v-if="tutorial_info.length"
                   >
-                    <div class="title">{{tutorial_info[0].title}}</div>
-                    <div class="time">更新时间：{{tutorial_info[0].updatetime}}</div>
+                    <div class="title">{{tutorial_info.current.title}}</div>
+                    <div class="time">更新时间：{{tutorial_info.current.updatetime}}</div>
                     <div
                       class="detail"
-                      v-html="tutorial_info[0].content"
+                      v-html="tutorial_info.current.content"
                     ></div>
                   </div>
                 </Content>
@@ -163,7 +161,7 @@ export default {
         { title: "产品标准文档", key: "doc" }
       ],
       activeTab: {},
-      contentChange: false //内容发生变化，每变一次加1
+      contentChange: false //内容发生变化
     };
   },
   computed: {

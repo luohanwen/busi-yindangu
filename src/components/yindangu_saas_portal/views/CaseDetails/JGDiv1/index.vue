@@ -5,7 +5,7 @@
             <YdgHeader :activeId="'3'"></YdgHeader>
             <Content>
                 <div class="ydg-container">
-                    <div class="detail" v-if="CaseDetails.length" v-html="CaseDetails[0].details">
+                    <div class="detail" v-html="CaseDetails.current.details">
                     </div>
                 </div>
             </Content>

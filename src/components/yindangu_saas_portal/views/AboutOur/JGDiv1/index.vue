@@ -150,12 +150,11 @@
               <div class="address">
                 <div
                   class="content"
-                  v-if="CompanyAddress.length"
                 >
                   <div class="title">公司地址</div>
-                  <p>地址：{{CompanyAddress[0].address}}</p>
-                  <p>电话：{{CompanyAddress[0].photo}}</p>
-                  <p>邮箱：{{CompanyAddress[0].mail}}</p>
+                  <p>地址：{{CompanyAddress.current.address}}</p>
+                  <p>电话：{{CompanyAddress.current.photo}}</p>
+                  <p>邮箱：{{CompanyAddress.current.mail}}</p>
                 </div>
               </div>
             </div>
@@ -218,10 +217,10 @@ export default {
   },
   computed: {
     compantList() {
-      return (this.OurInfonation[0] && this.OurInfonation[0].compantList) || {};
+      return (this.OurInfonation.current && this.OurInfonation.current.compantList) || {};
     },
     ourCustomer() {
-      return (this.OurInfonation[0] && this.OurInfonation[0].ourCustomer) || {};
+      return (this.OurInfonation.current && this.OurInfonation.current.ourCustomer) || {};
     }
   },
   components: {
