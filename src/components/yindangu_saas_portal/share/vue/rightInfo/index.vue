@@ -1,5 +1,5 @@
 <template>
-  <div :class="['rightInfo',{'top':isTop}]">
+  <div class="rightInfo">
     <div class="item">
       <p>产品</p>
       <p>体验</p>
@@ -57,16 +57,8 @@ export default {
     };
   },
   created() {
-    this.bindScroll();
   },
   methods: {
-    bindScroll() {
-      $(window).on("scroll", () => {
-        console.log("scroll");
-        let scrollTop = $(window).scrollTop();
-        this.isTop = !!(scrollTop > 700);
-      });
-    },
     togglePopup(showPupop) {
       this.showPupop = showPupop;
     }
@@ -80,10 +72,11 @@ export default {
   width: 46px;
   font-size: 14px;
   text-align: center;
-  position: absolute;
+  position: fixed;
   right: 10px;
-  top: 660px;
+  top: 60%;
   line-height: 1.4;
+  z-index: 1000;
   .item {
     width: 100%;
     height: 46px;
