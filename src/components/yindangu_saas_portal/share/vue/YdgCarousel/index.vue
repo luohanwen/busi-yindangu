@@ -5,6 +5,8 @@
     v-model="bannerValue"
     loop
     :autoplay="CarouselPage.length>1"
+    :dots="CarouselPage.length>1?'inside':'none'"
+    :arrow="CarouselPage.length>1?'hover':'never'"
     :class="['banner','type'+type]"
   >
     <CarouselItem v-for="item in CarouselPage">

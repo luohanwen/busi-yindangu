@@ -1,4 +1,5 @@
 <template>
+
   <div :class="['banner',{'isTop':isTop}]">
     <Carousel
       v-model="bannerValue"
@@ -39,6 +40,7 @@
       </div>
     </div>
   </div>
+
 </template>
 <script>
 export default {
@@ -83,8 +85,12 @@ export default {
         let scrollTop = $(window).scrollTop();
         if (this.isTop && scrollTop == 0) {
           this.isTop = false;
-        } else if (!this.isTop && scrollTop > 400) {
+          //   显示顶部菜单
+          $(".el-menu-ydg").show();
+        } else if (!this.isTop && scrollTop > 340) {
           this.isTop = true;
+          //   隐藏顶部菜单
+          $(".el-menu-ydg").hide();
         }
       });
     }

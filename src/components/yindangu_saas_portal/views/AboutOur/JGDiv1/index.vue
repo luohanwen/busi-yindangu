@@ -4,29 +4,56 @@
     <Layout>
       <YdgHeader :activeId="'5'"></YdgHeader>
       <content>
-        <SubMenu @tabChange="tabChange" :navList="navList" :CarouselPage="CarouselPage" navTitle="关于我们"></SubMenu>
+        <SubMenu
+          @tabChange="tabChange"
+          :navList="navList"
+          :CarouselPage="CarouselPage"
+          navTitle="关于我们"
+        ></SubMenu>
         <div class="subMenuContent">
           <!-- 智企云 -->
-          <div class="smc home" v-show="activeTab.key === 'home'">
+          <div
+            class="smc home"
+            v-show="activeTab.key === 'home'"
+          >
             <div class="ydg-container">
               <div class="intro">
                 <div class="title">{{ compantList.title }}</div>
-                <div class="desc" v-html="compantList.content"></div>
+                <div
+                  class="desc"
+                  v-html="compantList.content"
+                ></div>
               </div>
             </div>
-            <div class="intro-two" v-show="compantList.title"></div>
+            <div
+              class="intro-two"
+              v-show="compantList.title"
+            >
+                <div class="int-company">
+                    <div class="title">企业管理</div>
+                </div>
+            </div>
             <div class="ydg-container">
               <div class="intro">
                 <div class="title">{{ ourCustomer.title }}</div>
-                <div class="desc" v-html="ourCustomer.content"></div>
+                <div
+                  class="desc"
+                  v-html="ourCustomer.content"
+                ></div>
               </div>
             </div>
           </div>
           <!-- 网站公告 -->
-          <div class="smc notice" v-show="activeTab.key === 'notice'">
+          <div
+            class="smc notice"
+            v-show="activeTab.key === 'notice'"
+          >
             <div class="ydg-container">
               <div class="notice-list">
-                <div class="item" v-for="item in CompanyNotice">
+                <div
+                  class="item"
+                  v-for="item in CompanyNotice"
+                >
                   <div class="time">
                     <p>{{ item.notice_time | toDay }}</p>
                     <p>
@@ -38,19 +65,31 @@
                   </div>
                   <div class="item-r">
                     <div class="title">{{ item.notice_title }}</div>
-                    <div class="notice-content" v-html="item.notice_message"></div>
+                    <div
+                      class="notice-content"
+                      v-html="item.notice_message"
+                    ></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- 公司动态 -->
-          <div class="smc dynamic" v-show="activeTab.key === 'dynamic'">
+          <div
+            class="smc dynamic"
+            v-show="activeTab.key === 'dynamic'"
+          >
             <div class="ydg-container">
               <div class="list">
-                <div class="item" v-for="item in CompanyDynamics">
+                <div
+                  class="item"
+                  v-for="item in CompanyDynamics"
+                >
                   <div class="item-hd">
-                    <img v-id2url:src="item.coverPhoto" alt>
+                    <img
+                      v-id2url:src="item.coverPhoto"
+                      alt
+                    >
                   </div>
                   <div class="item-b">
                     <div class="title">{{item.mainTitle}}</div>
@@ -62,18 +101,41 @@
             </div>
           </div>
           <!-- 联系我们 -->
-          <div class="smc contact" v-show="activeTab.key === 'contact'">
+          <div
+            class="smc contact"
+            v-show="activeTab.key === 'contact'"
+          >
             <div class="ydg-container">
-              <div class="info">
-                <img src="~@share/img/contact-info.png" alt>
+              <div
+                class="info"
+                v-if="contactUsCont.length"
+              >
+                <Row :gutter="120">
+                  <Col
+                    span="8"
+                    v-for="item in contactUsCont"
+                  >
+                  <div class="info-content">
+                    <div class="title">{{item.title}}</div>
+                    <p class="tel">电话：{{item.tel}}</p>
+                    <p class="mail">邮箱：{{item.mail}}</p>
+                  </div>
+                  </Col>
+                </Row>
               </div>
             </div>
             <div class="detail">
               <div class="map">
-                <img src="~@share/img/about_map.png" alt>
+                <img
+                  src="~@share/img/about_map.png"
+                  alt
+                >
               </div>
               <div class="address">
-                <div class="content" v-if="CompanyAddress.length">
+                <div
+                  class="content"
+                  v-if="CompanyAddress.length"
+                >
                   <div class="title">公司地址</div>
                   <p>地址：{{CompanyAddress[0].address}}</p>
                   <p>电话：{{CompanyAddress[0].photo}}</p>

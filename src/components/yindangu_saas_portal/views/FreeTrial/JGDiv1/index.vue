@@ -117,7 +117,18 @@ import YdgHeader from "@share/vue/header/index.vue";
 import RightInfo from "@share/vue/rightInfo/index.vue";
 export default {
   props: entities,
-  data: function() {
+  data() {
+    // 验证数字
+    const validateNumFunc = (rule, value, callback) => {
+      if (/^[0-9]+$/.test(+value)) {
+        callback();
+      } else {
+        callback(new Error("请输入数字值"));
+      }
+    };
+
+    const validateNum = { validator: validateNumFunc, trigger: "change" };
+
     return {
       formValidate: {
         name: "",
@@ -146,14 +157,16 @@ export default {
             required: true,
             message: "请输入手机号码",
             trigger: "blur"
-          }
+          },
+          validateNum
         ],
         sendcode: [
           {
             required: true,
             message: "请输入手机验证号码",
             trigger: "blur"
-          }
+          },
+          validateNum
         ],
         email: [
           {
