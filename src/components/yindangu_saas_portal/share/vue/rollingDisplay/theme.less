@@ -1,37 +1,39 @@
 @import (reference) "~@share/less/var";
 
 .line-clamp(@num) {
-    word-break: break-all;
-    display: -webkit-box;
-    -webkit-line-clamp: @num;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+	word-break: break-all;
+	display: -webkit-box;
+	-webkit-line-clamp: @num;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 .rollingDisplay {
-    margin-top: 30px;
-    .rolling-title {
-        font-size: 18px;
-        color: rgb(51, 51, 51);
-        font-weight: bold;
-        .ivu-col {
-            padding-bottom: 10px;
-            border-right: 1px solid rgb(231, 229, 229);
-            &:last-child {
-                border-right: none;
-            }
-        }
-    }
-    .rolling-content {
-        font-size: 14px;
-        color: rgb(51, 51, 51);
-        .ivu-col {
-            .line-clamp(2);
-            line-height: 1.6;
-            border-right: 1px solid rgb(231, 229, 229);
-            &:last-child {
-                border-right: none;
-            }
-        }
-    }
+	margin-top: 30px;
+	.rolling-title {
+		font-size: 18px;
+		color: rgb(51, 51, 51);
+		font-weight: bold;
+		.ivu-col {
+			padding-bottom: 10px;
+			border-right: 1px solid rgb(231, 229, 229);
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
+	.rolling-content {
+		font-size: 14px;
+		color: rgb(51, 51, 51);
+		.ivu-col {
+			.line-clamp(2);
+			line-height: 1.6;
+			border-right: 1px solid rgb(231, 229, 229);
+			&:last-child {
+				border-right: none;
+			}
+		}
+		a {
+			color: rgb(51, 51, 51);
+		}
+	}
 }
-

@@ -24,6 +24,21 @@
 			text-align: center;
 			font-size: 40px;
 			color: @main-color;
+			position: relative;
+			p {
+				position: relative;
+				z-index: 200;
+			}
+			span {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 100;
+				color: rgb(231, 229, 230);
+				font-size: 130px;
+				font-weight: bold;
+			}
 		}
 		.desc {
 			line-height: 2.4;
@@ -34,9 +49,65 @@
 		}
 	}
 	.intro-two {
+		position: relative;
 		height: 840px;
 		background: url("~@share/img/about-our.png") center top no-repeat;
-		background-size: auto 100%;
+        background-size: auto 100%;
+        .ydg-container{
+            position: relative;
+            height: 100%;
+        }
+		.int-detail {
+			color: white;
+			.title {
+                font-size: 24px;
+                padding-left: 16px;
+			}
+			ul {
+                margin-top: 16px;
+				list-style: none;
+				font-size: 0;
+				li {
+					box-sizing: border-box;
+					font-size: 14px;
+					border-right: 1px solid rgb(90, 88, 101);
+					line-height: 1;
+					padding: 0 16px;
+					margin-bottom: 10px;
+					display: inline-block;
+				}
+			}
+
+			&.int-company {
+				position: absolute;
+				top: 290px;
+				left: 400px;
+				ul {
+					width: 740px;
+					li {
+						width: 145px;
+						&:nth-child(5n) {
+							border-right: none;
+						}
+					}
+				}
+			}
+
+			&.int-project {
+				position: absolute;
+				top: 570px;
+				left: 190px;
+				ul {
+					width: 650px;
+					li {
+						width: 213px;
+						&:nth-child(3n) {
+							border-right: none;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -141,29 +212,30 @@
 .contact {
 	background-color: white;
 	.info {
-        padding: 70px 60px 80px;
-        .info-content{
-            .title{
-                height: 42px;
-                line-height: 42px;
-                text-align: center;
-                border-top: 1px solid #cccccc;
-                border-bottom: 1px solid #cccccc;
-                font-size: 18px;
-                color: @main-color;
-            }
-            .tel,.mail{
-                color: @main-color;
-                font-size: 14px;
-                line-height: 1;
-            }
-            .tel{
-                margin-top: 22px;
-            }
-            .mail{
-                margin-top: 28px;
-            }
-        }
+		padding: 70px 60px 80px;
+		.info-content {
+			.title {
+				height: 42px;
+				line-height: 42px;
+				text-align: center;
+				border-top: 1px solid #cccccc;
+				border-bottom: 1px solid #cccccc;
+				font-size: 18px;
+				color: @main-color;
+			}
+			.tel,
+			.mail {
+				color: @main-color;
+				font-size: 14px;
+				line-height: 1;
+			}
+			.tel {
+				margin-top: 22px;
+			}
+			.mail {
+				margin-top: 28px;
+			}
+		}
 	}
 	.detail {
 		.map {

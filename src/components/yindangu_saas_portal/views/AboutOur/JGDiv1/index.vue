@@ -18,7 +18,9 @@
           >
             <div class="ydg-container">
               <div class="intro">
-                <div class="title">{{ compantList.title }}</div>
+                <div class="title">
+                  <p>{{ compantList.title }}</p><span>01</span>
+                </div>
                 <div
                   class="desc"
                   v-html="compantList.content"
@@ -29,13 +31,26 @@
               class="intro-two"
               v-show="compantList.title"
             >
-                <div class="int-company">
-                    <div class="title">企业管理</div>
+              <div class="ydg-container">
+                <div class="int-detail int-company">
+                  <div class="title">企业管理</div>
+                  <ul>
+                    <li v-for="name in companySysList">{{name}}</li>
+                  </ul>
                 </div>
+                <div class="int-detail int-project">
+                  <div class="title">项目管理</div>
+                  <ul>
+                    <li v-for="name in projectSysList">{{name}}</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="ydg-container">
               <div class="intro">
-                <div class="title">{{ ourCustomer.title }}</div>
+                <div class="title">
+                  <p>{{ ourCustomer.title }}</p><span>03</span>
+                </div>
                 <div
                   class="desc"
                   v-html="ourCustomer.content"
@@ -170,6 +185,31 @@ export default {
         // { title: "加入我们", key: "joinus" },
         // { title: "伙伴加盟", key: "partner" },
         { title: "联系我们", key: "contact" }
+      ],
+      //企业管理系统列表
+      companySysList: [
+        "协同办公管理系统",
+        "客户关系管理系统",
+        "营销管理系统",
+        "合同管理系统",
+        "项目系统",
+        "产品管理系统",
+        "采购管理系统",
+        "客户管理系统",
+        "费控管理系统",
+        "资金管理系统",
+        "自小管理系统",
+        "人力资源管理系统"
+      ],
+      //工程管理列表
+      projectSysList: [
+        "劳务管理系统",
+        "物资管理系统",
+        "设备管理系统",
+        "成本管理系统",
+        "EPC总承包管理系统",
+        "施工项目智慧工地管理系统",
+        "施工企业综合项目管理系统"
       ],
       activeTab: {}
     };
