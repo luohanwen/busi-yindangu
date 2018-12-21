@@ -22,7 +22,7 @@
                     <p>携手共赢，与全球合作伙伴共建云端生态</p>
                 </div>
                 <div class="cooperativePartner">
-                    <Row :gutter="40">
+                    <Row>
                         <i-Col span="6" v-for="partner in CooperativePartner">
                         <img v-id2url:src="partner.PartnerImg" alt="">
                         </i-Col>
