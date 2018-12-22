@@ -1,66 +1,66 @@
 <template>
 
-  <div>
+<div>
 
-    <el-menu
-      :default-active="activeId"
-      class="el-menu-ydg"
-      mode="horizontal"
-      text-color="#fff"
-      background-color="#212433"
-      active-text-color="#fff"
-      v-if="newNavBarList.length"
+  <el-menu
+    :default-active="activeId"
+    class="el-menu-ydg"
+    mode="horizontal"
+    text-color="#fff"
+    background-color="#212433"
+    active-text-color="#fff"
+    v-if="newNavBarList.length"
+  >
+
+    <img
+      src="~@share/img/logo.png"
+      alt=""
+      class="logo"
     >
 
-      <img
-        src="~@share/img/logo.png"
-        alt=""
-        class="logo"
+    <template v-for="nav in newNavBarList">
+      <el-submenu
+        :index="nav.id"
+        v-if="nav.children && nav.children.length>0"
       >
+        <template slot="title">{{nav.titile}}</template>
 
-      <template v-for="nav in newNavBarList">
-        <el-submenu
-          :index="nav.id"
-          v-if="nav.children && nav.children.length>0"
-        >
-          <template slot="title">{{nav.titile}}</template>
+        <template v-for="navSub in nav.children">
+          <el-submenu
+            :index="navSub.id"
+            v-if="navSub.children && navSub.children.length>0"
+          >
+            <template slot="title">{{navSub.titile}}</template>
+            <template v-for="navThree in navSub.children">
+              <el-menu-item
+                :index="navThree.id"
+                @click.native="selectNav(navThree)"
+              >{{navThree.titile}}</el-menu-item>
+            </template>
 
-          <template v-for="navSub in nav.children">
-            <el-submenu
-              :index="navSub.id"
-              v-if="navSub.children && navSub.children.length>0"
-            >
-              <template slot="title">{{navSub.titile}}</template>
-              <template v-for="navThree in navSub.children">
-                <el-menu-item
-                  :index="navThree.id"
-                  @click.native="selectNav(navThree)"
-                >{{navThree.titile}}</el-menu-item>
-              </template>
+          </el-submenu>
+          <el-menu-item
+            v-else
+            :index="navSub.id"
+            @click.native="selectNav(navSub)"
+          >{{navSub.titile}}</el-menu-item>
+        </template>
 
-            </el-submenu>
-            <el-menu-item
-              v-else
-              :index="navSub.id"
-              @click.native="selectNav(navSub)"
-            >{{navSub.titile}}</el-menu-item>
-          </template>
+      </el-submenu>
 
-        </el-submenu>
+      <el-menu-item
+        v-else
+        :index="nav.id"
+        @click.native="selectNav(nav)"
+      >{{nav.titile}}</el-menu-item>
+    </template>
 
-        <el-menu-item
-          v-else
-          :index="nav.id"
-          @click.native="selectNav(nav)"
-        >{{nav.titile}}</el-menu-item>
-      </template>
-
-      <div class="menu-right">
-        <div class="btn-menu">登录</div>
-        <div class="btn-menu">注册</div>
-      </div>
-    </el-menu>
-  </div>
+    <div class="menu-right">
+      <div class="btn-menu">登录</div>
+      <div class="btn-menu">注册</div>
+    </div>
+  </el-menu>
+</div>
 
 </template>
 <script>
@@ -152,6 +152,4 @@ export default {
   }
 }
 </style>
-
-<style lang="less" src="./theme.less" scoped></style>
-
+<style lang="less" src="./theme.less" scoped=true></style>

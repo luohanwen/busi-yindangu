@@ -1,12 +1,12 @@
 <template>
-    <div class="ydg-container" v-if="IntroducePageTwo.length">
-        <div class="tabs">
-            <div :class="['item',{active:tab === activeTab}]" v-for="tab in IntroducePageTwo" @click="changeTab(tab)"><span>{{tab.tabsName}}</span></div>
-        </div>
-        <div class="tab-content">
-            {{activeTab.tabsContent}}
-        </div>
+<div class="ydg-container" v-if="IntroducePageTwo.length">
+    <div class="tabs">
+        <div :class="['item',{active:tab === activeTab}]" v-for="tab in IntroducePageTwo" @click="changeTab(tab)"><span>{{tab.tabsName}}</span></div>
     </div>
+    <div class="tab-content">
+        {{activeTab.tabsContent}}
+    </div>
+</div>
 </template>
 <script>
 import vdk from "v3-vdk";
@@ -36,7 +36,7 @@ export default {
     }
 };
 </script>
-<style scoped lang="less">
+<style scoped=true lang="less">
 @import (reference) "~@share/less/var.less";
 .ydg-container {
     margin: 0 auto;
@@ -72,4 +72,3 @@ export default {
     font-size: 24px;
 }
 </style>
-

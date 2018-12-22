@@ -1,23 +1,23 @@
 <template>
-    <div class="traitTabs">
-        <div class="ydg-container">
-            <div class="tabs">
-                <div v-for="(tab,index) in TraitTabs" :class="['item',{'active':index === activeIndex}]" @mouseover="slideTo(index)">
-                    <img v-id2url:src="tab.icon" alt="">
-                    <p>{{tab.title}}</p>
-                </div>
+<div class="traitTabs">
+    <div class="ydg-container">
+        <div class="tabs">
+            <div v-for="(tab,index) in TraitTabs" :class="['item',{'active':index === activeIndex}]" @mouseover="slideTo(index)">
+                <img v-id2url:src="tab.icon" alt="">
+                <p>{{tab.title}}</p>
             </div>
         </div>
-        <div class="tab-content">
-            <div class="swiper-container traitTabs-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" v-for="item in TraitTabs" v-html="item.richContent">
+    </div>
+    <div class="tab-content">
+        <div class="swiper-container traitTabs-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="item in TraitTabs" v-html="item.richContent">
 
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </template>
 <script>
 import Swiper from "@share/swiper/swiper.min";
@@ -62,4 +62,4 @@ export default {
     }
 };
 </script>
-<style lang="less" src="./theme.less" scoped></style>
+<style lang="less" src="./theme.less" scoped=true></style>

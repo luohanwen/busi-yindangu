@@ -3,22 +3,26 @@
     <Projects>
         <ComponentCode>yindangu_saas_portal</ComponentCode>
         <ComponentName>智企云门户网站</ComponentName>
-        <UpdateTime>2018-11-17 14:54:08</UpdateTime>
+        <UpdateTime>2018-12-11 21:10:12</UpdateTime>
         <CreatTime>2018-11-15 19:20:49</CreatTime>
-        <LastBuildTime>2018-11-17 13:25:03</LastBuildTime>
+        <LastBuildTime>2018-12-11 18:24:50</LastBuildTime>
         <LastBuildType>Template</LastBuildType>
-        <NodeModulesVersion>1.0.26</NodeModulesVersion>
-        <TemplatePath>D:\v3开发系统\开发库\20181012\DevSystem\Template</TemplatePath>
-        <TemplateLastModifyTime>2018-11-17 11:42:50</TemplateLastModifyTime>
+        <NodeModulesVersion>1.0.27</NodeModulesVersion>
+        <TemplatePath>D:\v3开发系统\正式库\21081010\DevSystem\Template</TemplatePath>
+        <TemplateLastModifyTime>2018-12-11 17:31:52</TemplateLastModifyTime>
     </Projects>
     <Components>
         <VdevprojComponentInfo>
-            <Code>Product</Code>
-            <Name>产品</Name>
-        </VdevprojComponentInfo>
-        <VdevprojComponentInfo>
             <Code>ProductExperience</Code>
             <Name>产品体验</Name>
+        </VdevprojComponentInfo>
+        <VdevprojComponentInfo>
+            <Code>ProductList</Code>
+            <Name>产品概述</Name>
+        </VdevprojComponentInfo>
+        <VdevprojComponentInfo>
+            <Code>Product</Code>
+            <Name>产品详情</Name>
         </VdevprojComponentInfo>
         <VdevprojComponentInfo>
             <Code>FreeTrial</Code>

@@ -67,5 +67,57 @@
       "pid": "2",
       "titile": "免费试用"
     }
+  ],
+  "newNavBarList": [
+    {
+      "id": "1",
+      "groupId": "yingxiao",
+      "groupTitle": "营销",
+      "titile": "营销云"
+    },
+    {
+      "id": "2",
+      "groupId": "xiaoshou",
+      "groupTitle": "销售",
+      "titile": "销售云"
+    },
+    {
+      "id": "3",
+      "groupId": "xiaoshou",
+      "groupTitle": "销售",
+      "titile": "销售易"
+    },
+    {
+      "id": "4",
+      "groupId": "new",
+      "groupTitle": "新产品",
+      "titile": "云服务器ECS"
+    },
+    {
+      "id": "5",
+      "groupId": "new",
+      "groupTitle": "新产品",
+      "titile": "云服务器ECS"
+    },
+    {
+      "id": "6",
+      "groupId": "new",
+      "groupTitle": "新产品",
+      "titile": "云服务器ECS"
+    }
+  ],
+  "newDropDownList": [
+    {
+      "id": "1",
+      "titile": "产品概述"
+    },
+    {
+      "id": "2",
+      "titile": "产品体验"
+    },
+    {
+      "id": "3",
+      "titile": "产品试用"
+    }
   ]
 }

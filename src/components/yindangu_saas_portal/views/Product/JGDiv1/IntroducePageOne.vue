@@ -1,15 +1,15 @@
 <template>
-    <div class="ydg-container">
-        <div class="introducePageOne">
-            <div class="item">
-                <p class="title">{{IntroducePageOne.current.title}}</p>
-                <p class="content">{{IntroducePageOne.current.content}}</p>
-            </div>
-            <div class="item">
-                <img v-id2url:src="IntroducePageOne.current.img" alt="">
-            </div>
+<div class="ydg-container">
+    <div class="introducePageOne">
+        <div class="item">
+            <p class="title">{{IntroducePageOne.current.title}}</p>
+            <p class="content">{{IntroducePageOne.current.content}}</p>
+        </div>
+        <div class="item">
+            <img v-id2url:src="IntroducePageOne.current.img" alt="">
         </div>
     </div>
+</div>
 </template>
 <script>
 import vdk from "v3-vdk";
@@ -28,7 +28,7 @@ export default {
     methods: {}
 };
 </script>
-<style scoped lang="less">
+<style scoped=true lang="less">
 @import (reference) "~@share/less/var.less";
 .ydg-container {
     margin: 0 auto;
@@ -62,4 +62,3 @@ export default {
     }
 }
 </style>
-

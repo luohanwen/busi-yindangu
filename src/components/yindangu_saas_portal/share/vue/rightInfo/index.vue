@@ -1,50 +1,50 @@
 <template>
-  <div class="rightInfo">
-    <div class="item">
-      <p>产品</p>
-      <p>体验</p>
-    </div>
-    <div class="item">
-      <p>免费</p>
-      <p>试用</p>
-    </div>
-    <div class="item2">
-      <p>伙伴</p>
-      <p>加盟</p>
-    </div>
-    <div
-      class="item2"
-      @mouseover="togglePopup(true)"
-      @mouseout="togglePopup(false)"
+<div class="rightInfo">
+  <div class="item">
+    <p>产品</p>
+    <p>体验</p>
+  </div>
+  <div class="item">
+    <p>免费</p>
+    <p>试用</p>
+  </div>
+  <div class="item2">
+    <p>伙伴</p>
+    <p>加盟</p>
+  </div>
+  <div
+    class="item2"
+    @mouseover="togglePopup(true)"
+    @mouseout="togglePopup(false)"
+  >
+    <img
+      src="~@share/img/icon_phone.png"
+      alt=""
     >
-      <img
-        src="~@share/img/icon_phone.png"
-        alt=""
-      >
-      <p>咨询</p>
-    </div>
+    <p>咨询</p>
+  </div>
 
-    <div
-      class="popup"
-      v-show="showPupop"
-    >
-      <p class="title">电话咨询</p>
-      <div class="list">
-        <div class="row"><img
-            src="~@share/img/menu_icon_3.png"
-            alt=""
-          >客服电话：0756-1234567</div class="item">
-        <div class="row"><img
-            src="~@share/img/menu_icon_4.png"
-            alt=""
-          >售前咨询：0756-1234567</div class="item">
-        <div class="row"><img
-            src="~@share/img/menu_icon_5.png"
-            alt=""
-          >售后咨询：0756-1234567</div class="item">
-      </div>
+  <div
+    class="popup"
+    v-show="showPupop"
+  >
+    <p class="title">电话咨询</p>
+    <div class="list">
+      <div class="row"><img
+          src="~@share/img/menu_icon_3.png"
+          alt=""
+        >客服电话：0756-1234567</div class="item">
+      <div class="row"><img
+          src="~@share/img/menu_icon_4.png"
+          alt=""
+        >售前咨询：0756-1234567</div class="item">
+      <div class="row"><img
+          src="~@share/img/menu_icon_5.png"
+          alt=""
+        >售后咨询：0756-1234567</div class="item">
     </div>
   </div>
+</div>
 </template>
 <script>
 // 右边悬浮信息
@@ -65,7 +65,7 @@ export default {
   }
 };
 </script>
-<style lang="less" scoped>
+<style lang="less" scoped=true>
 @import (reference) "~@share/less/var";
 
 .rightInfo {

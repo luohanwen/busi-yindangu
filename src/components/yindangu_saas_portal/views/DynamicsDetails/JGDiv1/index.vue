@@ -1,6 +1,6 @@
 <template>
-  <!-- 门户网站动态详情 -->
-  <div>详情页是一个文章详情页面 跟CaseDetails共用一个模板 </div>
+  <!-- 门户网站动态详情 --> 
+<div>详情页是一个文章详情页面 跟CaseDetails共用一个模板 </div>
 </template>
 <script>
   import vdk from 'v3-vdk';

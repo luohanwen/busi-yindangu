@@ -1,83 +1,83 @@
 <template>
-  <div class="rollingDisplay">
-    <Row
-      :gutter="20"
-      class="rolling-title"
-    >
-      <Col span="6">最新活动</Col>
-      <Col span="6">新闻动态</Col>
-      <Col span="6">最近案例</Col>
-      <Col span="6">产品论道</Col>
-    </Row>
+<div class="rollingDisplay">
+  <Row
+    :gutter="20"
+    class="rolling-title"
+  >
+    <Col span="6">最新活动</Col>
+    <Col span="6">新闻动态</Col>
+    <Col span="6">最近案例</Col>
+    <Col span="6">产品论道</Col>
+  </Row>
 
-    <Row
-      type="flex"
-      :gutter="20"
-      class="rolling-content"
-    >
-      <Col span="6">
-      <div class="swiper-container rollingDisplay-swiper-active">
-        <div class="swiper-wrapper">
-          <div
-            class="swiper-slide"
-            v-for="item in RollingDisplay"
-          >
-            <a
-              href=""
-              target="_blank"
-            >{{item.active | limitWord}}</a>
-          </div>
+  <Row
+    type="flex"
+    :gutter="20"
+    class="rolling-content"
+  >
+    <Col span="6">
+    <div class="swiper-container rollingDisplay-swiper-active">
+      <div class="swiper-wrapper">
+        <div
+          class="swiper-slide"
+          v-for="item in RollingDisplay"
+        >
+          <a
+            href=""
+            target="_blank"
+          >{{item.active | limitWord}}</a>
         </div>
       </div>
-      </Col>
-      <Col span="6">
-      <div class="swiper-container rollingDisplay-swiper-news">
-        <div class="swiper-wrapper">
-          <div
-            class="swiper-slide"
-            v-for="item in RollingDisplay"
-          >
-            <a
-              href=""
-              target="_blank"
-            >{{item.news | limitWord}}</a>
-          </div>
+    </div>
+    </Col>
+    <Col span="6">
+    <div class="swiper-container rollingDisplay-swiper-news">
+      <div class="swiper-wrapper">
+        <div
+          class="swiper-slide"
+          v-for="item in RollingDisplay"
+        >
+          <a
+            href=""
+            target="_blank"
+          >{{item.news | limitWord}}</a>
         </div>
       </div>
-      </Col>
-      <Col span="6">
-      <div class="swiper-container rollingDisplay-swiper-cash">
-        <div class="swiper-wrapper">
-          <div
-            class="swiper-slide"
-            v-for="item in RollingDisplay"
-          >
-            <a
-              href=""
-              target="_blank"
-            >{{item.cash | limitWord}}</a>
-          </div>
+    </div>
+    </Col>
+    <Col span="6">
+    <div class="swiper-container rollingDisplay-swiper-cash">
+      <div class="swiper-wrapper">
+        <div
+          class="swiper-slide"
+          v-for="item in RollingDisplay"
+        >
+          <a
+            href=""
+            target="_blank"
+          >{{item.cash | limitWord}}</a>
         </div>
       </div>
-      </Col>
-      <Col span="6">
-      <div class="swiper-container rollingDisplay-swiper-product">
-        <div class="swiper-wrapper">
-          <div
-            class="swiper-slide"
-            v-for="item in RollingDisplay"
-          >
-            <a
-              href=""
-              target="_blank"
-            >{{item.product | limitWord}}</a>
-          </div>
+    </div>
+    </Col>
+    <Col span="6">
+    <div class="swiper-container rollingDisplay-swiper-product">
+      <div class="swiper-wrapper">
+        <div
+          class="swiper-slide"
+          v-for="item in RollingDisplay"
+        >
+          <a
+            href=""
+            target="_blank"
+          >{{item.product | limitWord}}</a>
         </div>
       </div>
-      </Col>
-    </Row>
+    </div>
+    </Col>
+  </Row>
 
-  </div>
+</div>
 </template>
 <script>
 import Swiper from "@share/swiper/swiper.min";
@@ -134,4 +134,4 @@ export default {
   }
 };
 </script>
-<style lang="less" src="./theme.less" scoped></style>
+<style lang="less" src="./theme.less" scoped=true></style>

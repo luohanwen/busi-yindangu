@@ -1,150 +1,83 @@
 <template>
   <!-- 客户服务 -->
-  <div class="ydg-page">
-    <Layout>
-      <YdgHeader :activeId="'4'"></YdgHeader>
-      <content>
-        <SubMenu
-          @tabChange="tabChange"
-          :navList="navList"
-          :CarouselPage="CarouselPage"
-          navTitle="客户服务"
-          :parentContentChange="contentChange"
-        ></SubMenu>
-        <div class="subMenuContent">
-          <!-- 服务体系介绍 -->
-          <div
-            class="smc intro"
-            v-show="activeTab.key === 'intro'"
-          >
-            <div class="ydg-container">
-              <div
-                class="desc"
-                v-html="ServiceSystemDescribe.current.RichDescribe"
-              ></div>
-              <div
-                class="funcList"
-                v-if="ServiceSystemFunction.length"
-              >
-                <Row :gutter="20">
-                  <Col
-                    span="6"
-                    v-for="func in ServiceSystemFunction"
-                  >
+<div class="ydg-page">
+	<Layout>
+		<YdgHeader :activeId="'4'"></YdgHeader>
+		<content>
+			<SubMenu @tabChange="tabChange" :navList="navList" :CarouselPage="CarouselPage" navTitle="客户服务" :parentContentChange="contentChange"></SubMenu>
+			<div class="subMenuContent">
+				<!-- 服务体系介绍 -->
+				<div class="smc intro" v-show="activeTab.key === 'intro'">
+					<div class="ydg-container">
+						<div class="desc" v-html="ServiceSystemDescribe.current.RichDescribe"></div>
+						<div class="funcList" v-if="ServiceSystemFunction.length">
+							<Row :gutter="20">
+								<i-Col span="6" v-for="func in ServiceSystemFunction">
                   <div class="func">
                     <div class="title">{{func.title}}</div>
                     <div class="icon">
-                      <img
-                        v-id2url:src="func.icon"
-                        alt
-                      >
+                      <img v-id2url:src="func.icon" alt>
                     </div>
                     <div class="introduce">{{func.introduce}}</div>
                   </div>
-                  </Col>
-                </Row>
-              </div>
+                </i-Col>
+              </Row>
             </div>
           </div>
-          <!-- 产品标准教程 -->
-          <div
-            class="smc course"
-            v-show="activeTab.key === 'course'"
-          >
-            <div class="ydg-container">
-              <Layout>
-                <Sider
-                  hide-trigger
-                  :style="{background: '#fff'}"
-                  class="ydg-slide course-slide"
-                >
-                  <Menu
-                    :active-name="initAcitveCourse"
-                    theme="light"
-                    width="auto"
-                    :open-names="[newCourseList[0].id]"
-                    v-if="newCourseList.length"
-                  >
-                    <template v-for="course in newCourseList">
-                      <Submenu
-                        :name="course.id"
-                        v-if="course.children && course.children.length>0"
-                      >
-                        <template slot="title">{{course.titile}}</template>
-                        <MenuItem
-                          :name="subCourse.id"
-                          v-for="subCourse in course.children"
-                          @click.native="selectCourse(subCourse)"
-                        >{{subCourse.titile}}</MenuItem>
-                      </Submenu>
-                      <MenuItem
-                        :name="course.id"
-                        @click.native="selectCourse(course)"
-                        v-else
-                      >{{course.titile}}</MenuItem>
-                    </template>
-                  </Menu>
-                </Sider>
-                <Content
-                  :style="{padding: '24px 40px 100px', minHeight: '280px', background: '#fff'}"
-                  class="course-content"
-                >
-                  <div
-                    class="course-detail"
-                  >
-                    <div class="title">{{tutorial_info.current.title}}</div>
-                    <div class="time">更新时间：{{tutorial_info.current.updatetime}}</div>
-                    <div
-                      class="detail"
-                      v-html="tutorial_info.current.content"
-                    ></div>
-                  </div>
-                </Content>
-              </Layout>
-            </div>
-          </div>
-          <!-- 产品标准文档 -->
-          <div
-            class="smc doc"
-            v-show="activeTab.key === 'doc'"
-          >
-            <div class="ydg-container">
-              <div class="doc-list">
-                <div
-                  class="item"
-                  v-for="doc in newDocList"
-                >
-                  <img
-                    src="~@share/img/icon_snow.png"
-                    alt
-                    class="icon-snow"
-                  >
-                  <div class="item-r">
-                    <div class="title">{{doc.titile}}</div>
-                    <ul v-if="doc.children && doc.children.length">
-                      <li
-                        v-for="subDoc in doc.children"
-                        @click="handleDoc(subDoc)"
-                      >{{subDoc.titile}}</li>
-                    </ul>
-                    <div class="more">更多
-                      <Icon type="chevron-down"></Icon>
-                    </div>
-                  </div>
+        </div>
+        <!-- 产品标准教程 -->
+        <div class="smc course" v-show="activeTab.key === 'course'">
+          <div class="ydg-container">
+            <Layout>
+              <Sider hide-trigger :style="{background: '#fff'}" class="ydg-slide course-slide">
+                <Menu :active-name="initAcitveCourse" theme="light" width="auto" :open-names="[newCourseList[0].id]" v-if="newCourseList.length">
+                  <template v-for="course in newCourseList">
+                    <Submenu :name="course.id" v-if="course.children && course.children.length>0">
+                      <template slot="title">{{course.titile}}</template>
+                      <MenuItem :name="subCourse.id" v-for="subCourse in course.children" @click.native="selectCourse(subCourse)">{{subCourse.titile}}</MenuItem>
+                    </Submenu>
+                    <MenuItem :name="course.id" @click.native="selectCourse(course)" v-else>{{course.titile}}</MenuItem>
+                  </template>
+                </Menu>
+              </Sider>
+              <Content :style="{padding: '24px 40px 100px', minHeight: '280px', background: '#fff'}" class="course-content">
+                <div class="course-detail">
+                  <div class="title">{{tutorial_info.current.title}}</div>
+                  <div class="time">更新时间：{{tutorial_info.current.updatetime}}</div>
+                  <div class="detail" v-html="tutorial_info.current.content"></div>
                 </div>
+              </Content>
+            </Layout>
+          </div>
+        </div>
+        <!-- 产品标准文档 -->
+        <div class="smc doc" v-show="activeTab.key === 'doc'">
+          <div class="ydg-container">
+            <div class="doc-list">
+              <div class="item" v-for="doc in newDocList">
+                <img src="~@share/img/icon_snow.png" alt class="icon-snow">
+                <div class="item-r">
+                  <div class="title">{{doc.titile}}</div>
+                  <ul v-if="doc.children && doc.children.length">
+                    <li v-for="subDoc in doc.children" @click="handleDoc(subDoc)">{{subDoc.titile}}</li>
+                  <div class="more">更多
+                    <Icon type="chevron-down"></Icon>
+                  </div>
+                </ul></div>
               </div>
             </div>
           </div>
         </div>
-      </content>
-      <YdgFooter></YdgFooter>
-    </Layout>
-    <BackTop></BackTop>
-    <RightInfo></RightInfo>
-  </div>
+      </div>
+    </content>
+    <YdgFooter></YdgFooter>
+  </Layout>
+  <BackTop></BackTop>
+  <RightInfo></RightInfo>
+</div>
 </template>
 <script>
-import vdk from "v3-vdk";
+  import vdk from "v3-vdk";
 import entities from "./entities.js";
 import YdgFooter from "@share/vue/footer/index.vue";
 import YdgHeader from "@share/vue/header/index.vue";
@@ -226,3 +159,4 @@ export default {
 };
 </script>
 <style scoped lang="less" src="./theme.less"></style>
+

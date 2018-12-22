@@ -2,6 +2,7 @@
   <div>
     <!-- 绑定当前行图片 -->
 	<img v-id2url:src="CarouselPage.current.img">
+    shareshare
 	<!-- 绑定当前行文字 -->
     <span v-text="CarouselPage.current.mainTitle"></span>
 	<!-- 循环图片数组 -->

@@ -1,5 +1,62 @@
 ﻿{
-  "Resources": [],
+  "Resources": [
+    {
+      "RelativePath": "vue\\footer\\index.vue",
+      "Type": null
+    },
+    {
+      "RelativePath": "vue\\header\\index.vue",
+      "Type": null
+    },
+    {
+      "RelativePath": "vue\\rightInfo\\index.vue",
+      "Type": null
+    },
+    {
+      "RelativePath": "js\\utils.js",
+      "Type": null
+    },
+    {
+      "RelativePath": "less\\var.less",
+      "Type": null
+    },
+    {
+      "RelativePath": "img\\bg_1.png",
+      "Type": null
+    },
+    {
+      "RelativePath": "img\\icon_phoneline.png",
+      "Type": null
+    },
+    {
+      "RelativePath": "img\\logo.png",
+      "Type": null
+    },
+    {
+      "RelativePath": "vue\\header\\entities.json",
+      "Type": null
+    },
+    {
+      "RelativePath": "img\\icon_phone.png",
+      "Type": null
+    },
+    {
+      "RelativePath": "img\\menu_icon_3.png",
+      "Type": null
+    },
+    {
+      "RelativePath": "img\\menu_icon_4.png",
+      "Type": null
+    },
+    {
+      "RelativePath": "img\\menu_icon_5.png",
+      "Type": null
+    },
+    {
+      "RelativePath": "less\\var.css",
+      "Type": null
+    }
+  ],
   "Plugins": [
     {
       "PluginName": "v3-vdk",
@@ -7,6 +64,13 @@
       "Version": "1.1.0",
       "Type": "V3ResourcePlugin",
       "LibaryCode": "dev"
+    },
+    {
+      "PluginName": "element-ui",
+      "SymbolicName": null,
+      "Version": "2.4.10",
+      "Type": "NodePlugin",
+      "LibaryCode": null
     }
   ]
 }
