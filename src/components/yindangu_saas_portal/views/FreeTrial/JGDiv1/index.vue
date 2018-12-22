@@ -2,7 +2,7 @@
   <!-- 门户网站产品试用 --> 
 <div class="ydg-page">
   <Layout>
-    <YdgHeader :activeId="'6'"></YdgHeader>
+    <YdgHeader :activeId="'2'"></YdgHeader>
     <Content>
       <div class="bg">
         <div class="ydg-container">

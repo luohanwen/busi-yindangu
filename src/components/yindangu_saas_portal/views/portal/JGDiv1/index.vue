@@ -1,7 +1,7 @@
 <template>
  <div class="ydg-page">
     <Layout>
-        <YdgHeader :activeId="'1'"></YdgHeader>
+        <YdgHeader :activeId="'1'" :NavBarList="NavBarList" :newNavBarList="newNavBarList" :newDropDownList="newDropDownList"></YdgHeader>
         <YdgFooter></YdgFooter>
     </Layout>
     <BackTop></BackTop>

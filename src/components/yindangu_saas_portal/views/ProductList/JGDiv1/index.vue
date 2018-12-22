@@ -1,7 +1,7 @@
 <template>
 <div class="ydg-page">
     <Layout>
-        <YdgHeader :activeId="'6'"></YdgHeader>
+        <YdgHeader :activeId="'2'"></YdgHeader>
         <Content>
             <YdgCarousel :CarouselPage="CarouselPage" :type="2"></YdgCarousel>
             <IntroducePageOne :IntroducePageOneNew="IntroducePageOne"></IntroducePageOne>

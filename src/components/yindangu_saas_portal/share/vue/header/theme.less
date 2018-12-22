@@ -1,39 +1,128 @@
+//引入平台皮肤基础变量 {pc/web/mobile}
+@import "~@vPlatform/skin/web/var.less";
 .ydg-header {
-    position: fixed;
-    width: 100%;
-    background-color: rgba(25, 29, 39, 0.2);
-    z-index: 2000;
+	position: fixed;
+	width: 100%;
+	background-color: rgba(25, 29, 39, 0.2);
+	z-index: 2000;
+	height: 60px;
+	box-sizing: border-box;
+	padding-left: 200px;
 }
 
-.logo {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
+.menu-l {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	.logo {
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		transform: translateY(-50%);
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+.ydg-first-menu {
+	font-size: 0;
+	.yfm-item {
+		display: inline-block;
+		font-size: 14px;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		position: relative;
+		color: white;
+		width: 110px;
+		cursor: pointer;
+		&.active {
+			background-color: @v-primary-color;
+		}
+		&:hover {
+			background-color: rgb(253, 204, 0);
+			color: rgb(132, 88, 0);
+		}
+		.ydg-sub-menu {
+			white-space: nowrap;
+			position: absolute;
+			left: 0;
+			top: 60px;
+			background-color: white;
+			color: #333;
+			display: flex;
+			.dropDownList {
+				padding: 20px 30px;
+				border-right: 1px solid rgb(230, 231, 233);
+				.dropDownListItem {
+					line-height: 1;
+					margin-bottom: 15px;
+					&:hover {
+						color: @v-primary-color;
+					}
+				}
+			}
+			.groupList {
+				padding: 20px 0 0 20px;
+				display: flex;
+				.group-item {
+					padding-right: 60px;
+					line-height: 1;
+					.group-title {
+						text-align: left;
+						cursor: auto;
+						color: rgb(159, 163, 164);
+						margin-bottom: 15px;
+					}
+					.gi-list {
+						.gil-item {
+							margin-bottom: 15px;
+							&:hover {
+								color: @v-primary-color;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .menu-right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    outline: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	outline: none;
 }
 
 .btn-menu {
-    width: 80px;
-    height: 38px;
-    line-height: 38px;
-    text-align: center;
-    color: white;
-    border: 1px solid rgb(92, 95, 106);
-    margin-right: 20px;
-    margin-top: 10px;
-    display: inline-block;
-    border-radius: 38px;
-    font-size: 14px;
-    cursor: pointer;
-    &:hover {
-        background-color: rgb(0, 121, 254);
-    }
+	width: 80px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	color: white;
+	border: 1px solid rgb(92, 95, 106);
+	margin-right: 20px;
+	margin-top: 10px;
+	display: inline-block;
+	border-radius: 38px;
+	font-size: 14px;
+	cursor: pointer;
+	&:hover {
+		background-color: rgb(0, 121, 254);
+	}
+}
+
+.ani-opacity-enter-active {
+	transition: opacity 0.2s ease-in;
+}
+.ani-opacity-enter {
+	opacity: 0;
+}
+.ani-opacity-enter-to {
+	opacity: 1;
 }

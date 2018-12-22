@@ -96,7 +96,7 @@ export default {
     },
     reset() {
       this.isTop = false;
-      $(".el-menu-ydg").show();
+      $(".ydg-header").show();
       $(window).scrollTop(0);
     },
     handleCanFixTop() {
@@ -118,11 +118,11 @@ export default {
           if (this.isTop && scrollTop == 0) {
             this.isTop = false;
             //   显示顶部菜单
-            $(".el-menu-ydg").show();
+            $(".ydg-header").show();
           } else if (!this.isTop && scrollTop > 340) {
             this.isTop = true;
             //   隐藏顶部菜单
-            $(".el-menu-ydg").hide();
+            $(".ydg-header").hide();
           }
         }
       });
