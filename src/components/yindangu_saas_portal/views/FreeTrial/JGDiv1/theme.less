@@ -97,3 +97,79 @@
         }
     }
 }
+
+.mask{
+    position: fixed;
+    left:0;
+    top:0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .3);
+    .popup{
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+    }
+}
+
+.popup-succ{
+    top:300px;
+    width: 470px;
+    height: 240px;
+    background-color: white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding:60px;
+    .ivu-icon-close{
+        position: absolute;
+        top:20px;
+        right:20px;
+        color: rgb(154,154,154);
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .info{
+        margin-top: 26px;
+        display: flex;
+        align-items: center;
+        .ivu-icon-checkmark-circled{
+            color: rgb(60,197,109);
+            font-size: 66px;
+        }
+        .title{
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(58,58,58);
+        }
+        .desc{
+            font-size: 16px;
+            color: rgb(53,53,53);
+            margin-top: 14px;
+        }
+        .info-r{
+            flex:1;
+            padding-left: 20px;
+        }
+    }
+}
+
+
+.ani-scale-enter-active{
+    .popup{
+        transform: all .3s;
+    }
+}
+
+.ani-scale-enter{
+    .popup{
+        transform: translateX(-50%) scale(0);
+    }
+}
+
+.ani-scale-enter-to{
+    .popup{
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+

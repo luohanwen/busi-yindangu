@@ -1,6 +1,6 @@
 <template>
 <div class="ydg-container" v-if="IntroducePageTwo.length">
-    <div class="tabs">
+    <div class="tabs" v-if="IntroducePageTwo.length>1">
         <div :class="['item',{active:tab === activeTab}]" v-for="tab in IntroducePageTwo" @click="changeTab(tab)"><span>{{tab.tabsName}}</span></div>
     </div>
     <div class="tab-content">

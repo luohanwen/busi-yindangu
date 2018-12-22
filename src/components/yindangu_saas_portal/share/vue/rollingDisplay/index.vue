@@ -4,10 +4,10 @@
     :gutter="20"
     class="rolling-title"
   >
-    <Col span="6">最新活动</Col>
-    <Col span="6">新闻动态</Col>
-    <Col span="6">最近案例</Col>
-    <Col span="6">产品论道</Col>
+    <Col span="6">网站公告<a href="">更多></a></Col>
+    <Col span="6">公司动态<a href="">更多></a></Col>
+    <Col span="6">最近案例<a href="">更多></a></Col>
+    <Col span="6">产品论道<a href="">更多></a></Col>
   </Row>
 
   <Row
@@ -20,7 +20,7 @@
       <div class="swiper-wrapper">
         <div
           class="swiper-slide"
-          v-for="item in RollingDisplay"
+          v-for="item in RollingDisplayactive"
         >
           <a
             href=""
@@ -35,7 +35,7 @@
       <div class="swiper-wrapper">
         <div
           class="swiper-slide"
-          v-for="item in RollingDisplay"
+          v-for="item in RollingDisplaynews"
         >
           <a
             href=""
@@ -50,7 +50,7 @@
       <div class="swiper-wrapper">
         <div
           class="swiper-slide"
-          v-for="item in RollingDisplay"
+          v-for="item in RollingDisplaycash"
         >
           <a
             href=""
@@ -65,7 +65,7 @@
       <div class="swiper-wrapper">
         <div
           class="swiper-slide"
-          v-for="item in RollingDisplay"
+          v-for="item in RollingDisplayproduct"
         >
           <a
             href=""
@@ -84,7 +84,19 @@ import Swiper from "@share/swiper/swiper.min";
 import "@share/swiper/swiper.min.css";
 export default {
   props: {
-    RollingDisplay: {
+    RollingDisplayactive: {
+      type: Array,
+      default: () => []
+    },
+    RollingDisplayproduct: {
+      type: Array,
+      default: () => []
+    },
+    RollingDisplaycash: {
+      type: Array,
+      default: () => []
+    },
+    RollingDisplaynews: {
       type: Array,
       default: () => []
     }

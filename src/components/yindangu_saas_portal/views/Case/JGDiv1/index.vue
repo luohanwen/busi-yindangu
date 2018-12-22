@@ -19,10 +19,11 @@
         <div class="case-list">
           <Row :gutter="20">
             <i-Col span="6" v-for="item in CashList">
-            <div class="case">
+            <div :class="['case',{'disabeld':!item.title}]">
               <img v-id2url:src="item.img" alt="">
               <div class="case-b">
-                <p>{{item.title | limitWord}}</p>
+                <p v-if="item.title">{{item.title | limitWord}}</p>
+                <p v-else>敬请期待</p>
               </div>
             </div>
             </i-Col>

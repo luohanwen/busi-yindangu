@@ -6,7 +6,7 @@
         <YdgCarousel :CarouselPage="CarouselPage"></YdgCarousel>
         <Content>
             <div class="ydg-container">
-                <RollingDisplay :RollingDisplay="RollingDisplay"></RollingDisplay>
+                <RollingDisplay :RollingDisplayactive="RollingDisplayactive" :RollingDisplayproduct="RollingDisplayproduct" :RollingDisplaycash="RollingDisplaycash" :RollingDisplaynews="RollingDisplaynews"></RollingDisplay>
                 <div class="tip1">
                     <p class="title">用伙伴的力量让企业上云更简单</p>
                     <p class="desc">云市场联合第三方服务商，满足你业务的全方位需求</p>

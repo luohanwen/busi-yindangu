@@ -63,6 +63,21 @@
   </Layout>
   <BackTop></BackTop>
   <RightInfo></RightInfo>
+  <!-- 弹窗成功 -->
+  <transition name="ani-scale" :duration="{'enter':300}">
+    <div class="mask" v-show="popup.succ">
+        <div class="popup popup-succ">
+            <Icon type="close" @click.native="hidePopup('succ')"></Icon>
+            <div class="info">
+                <Icon type="checkmark-circled"></Icon>
+                <div class="info-r">
+                    <p class="title">申请提交成功</p>
+                    <p class="dec">请保持通话畅通，我们会尽快与你联系核实</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </transition>
 </div>
 </template>
 <script>
@@ -131,6 +146,9 @@ export default {
             trigger: "blur"
           }
         ]
+      },
+      popup:{
+          succ:false
       }
     };
   },
@@ -150,14 +168,16 @@ export default {
     RightInfo
   },
   methods: {
+    showPopup(name){
+        this.popup[name] = true;
+    },
+    hidePopup(name){
+        this.popup[name] = false;
+    },
     handleSubmit(name) {
       this.$refs[name].validate(valid => {
         if (valid) {
-          this.$Modal.success({
-            title: "温馨提示",
-            content:
-              "<div class='pop-succ'><p>申请提交成功！</p><p>请保持通话畅通，我们会尽快与你联系核实。</p></div>"
-          });
+            this.showPopup("succ");
         } else {
           this.$Message.error("提交失败!");
         }
