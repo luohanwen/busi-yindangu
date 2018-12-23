@@ -3,31 +3,10 @@
 <div class="ydg-page">
     <Layout>
         <YdgHeader :activeId="'1'"></YdgHeader>
-        <YdgCarousel :CarouselPage="CarouselPage"></YdgCarousel>
+        <YdgCarousel :CarouselPage="CarouselPage" @on-btn="carouselPageBtnHandle"></YdgCarousel>
         <Content>
             <div class="ydg-container">
-                <RollingDisplay :RollingDisplayactive="RollingDisplayactive" :RollingDisplayproduct="RollingDisplayproduct" :RollingDisplaycash="RollingDisplaycash" :RollingDisplaynews="RollingDisplaynews"></RollingDisplay>
-                <div class="tip1">
-                    <p class="title">用伙伴的力量让企业上云更简单</p>
-                    <p class="desc">云市场联合第三方服务商，满足你业务的全方位需求</p>
-                </div>
-            </div>
-
-            <!-- 特性 -->
-            <TraitTabs :TraitTabs="TraitTabs" class="ydg-traittabs"></TraitTabs>
-
-            <div class="ydg-container">
-                <!-- 合作伙伴 -->
-                <div class="tip2">
-                    <p>携手共赢，与全球合作伙伴共建云端生态</p>
-                </div>
-                <div class="cooperativePartner">
-                    <Row>
-                        <i-Col span="6" v-for="partner in CooperativePartner">
-                        <img v-id2url:src="partner.PartnerImg" alt="">
-                        </i-Col>
-                    </Row>
-                </div>
+                <RollingDisplay :RollingDisplayactive="RollingDisplayactive" :RollingDisplayproduct="RollingDisplayproduct" :RollingDisplaycash="RollingDisplaycash" :RollingDisplaynews="RollingDisplaynews" @on-more="rollingDisplayMore" @on-item="rollingDisplayItem"></RollingDisplay>
             </div>
 
             <div class="ydg-container">
@@ -41,6 +20,27 @@
                         <img v-id2url:src="trait.img" alt="">
                         <p class="title">{{trait.title}}</p>
                         <p class="desc">{{trait.content|limitWord}}</p>
+                        </i-Col>
+                    </Row>
+                </div>
+            </div>
+
+            <div class="tip1">
+                <p class="title">用伙伴的力量让企业上云更简单</p>
+                <p class="desc">云市场联合第三方服务商，满足你业务的全方位需求</p>
+            </div>
+            <!-- 特性 -->
+            <TraitTabs :TraitTabs="TraitTabs" class="ydg-traittabs"></TraitTabs>
+
+            <div class="ydg-container">
+                <!-- 合作伙伴 -->
+                <div class="tip2">
+                    <p>携手共赢，与全球合作伙伴共建云端生态</p>
+                </div>
+                <div class="cooperativePartner">
+                    <Row>
+                        <i-Col span="6" v-for="partner in CooperativePartner">
+                        <img v-id2url:src="partner.PartnerImg" alt="">
                         </i-Col>
                     </Row>
                 </div>
@@ -79,7 +79,17 @@ export default {
     },
     created() {},
     mounted() {},
-    methods: {},
+    methods: {
+        rollingDisplayMore(name){
+            alert("我点击了更多"+name);
+        },
+        rollingDisplayItem(name,item){
+            alert("我点击了item，name为："+name+",item为："+JSON.stringify(item));
+        },
+        carouselPageBtnHandle(item){
+            alert("我点击了"+JSON.stringify(item));
+        }
+    },
     filters: {
     //动态描述超出三行省略号
     limitWord(word) {

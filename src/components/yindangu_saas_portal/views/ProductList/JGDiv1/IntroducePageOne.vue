@@ -6,6 +6,7 @@
                 <div class="item word">
                     <p class="title">{{item.title}}</p>
                     <p class="content">{{item.content}}</p>
+                    <p class="know-more" @click="knowMore(item)">了解更多></p>
                 </div>
                 <div class="item img">
                     <img v-id2url:src="item.img" alt="">
@@ -18,6 +19,7 @@
                 <div class="item word">
                     <p class="title">{{item.title}}</p>
                     <p class="content">{{item.content}}</p>
+                    <p class="know-more" @click="knowMore(item)">了解更多></p>
                 </div>
              </template>
         </div>
@@ -38,11 +40,17 @@ export default {
     data() {
         return {};
     },
-    methods: {}
+    methods: {
+        knowMore(item){
+            this.$emit("on-know-more",item);
+        }
+    }
 };
 </script>
 <style scoped=true lang="less">
 @import (reference) "~@share/less/var.less";
+@import "~@vPlatformWebSkinVar";
+@import "~@vPlatformBaseSkinVar";
 .ydg-container {
     margin: 0 auto;
     width: @main-width;
@@ -77,6 +85,12 @@ export default {
                 margin-top: 10px;
                 color: #666666;
                 font-size: 14px;
+            }
+            .know-more{
+                margin-top: 2px;
+                font-size: 14px;
+                color: @v-primary-color;
+                cursor: pointer;
             }
         }
         &.img{

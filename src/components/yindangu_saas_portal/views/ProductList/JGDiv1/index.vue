@@ -4,7 +4,7 @@
         <YdgHeader :activeId="'2'"></YdgHeader>
         <Content>
             <YdgCarousel :CarouselPage="CarouselPage" :type="2"></YdgCarousel>
-            <IntroducePageOne :IntroducePageOneNew="IntroducePageOne"></IntroducePageOne>
+            <IntroducePageOne :IntroducePageOneNew="IntroducePageOne" @on-know-more="knowMore"></IntroducePageOne>
         </Content>
         <YdgFooter></YdgFooter>
     </Layout>
@@ -33,7 +33,9 @@ export default {
         YdgFooter
     },
 	methods:{
-		
+		knowMore(item){
+            alert("我点击了解更多"+JSON.stringify(item));
+        }
 	}
 };
 </script>

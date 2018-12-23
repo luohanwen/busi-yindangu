@@ -16,7 +16,7 @@
               <div class="desc" v-html="compantList.content"></div>
             </div>
           </div>
-          <div class="intro-two" v-show="compantList.title">
+          <div class="intro-two">
             <div class="ydg-container">
               <div class="int-detail int-company">
                 <div class="title">企业管理</div>

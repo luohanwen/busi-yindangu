@@ -4,10 +4,10 @@
     :gutter="20"
     class="rolling-title"
   >
-    <Col span="6">网站公告<a href="">更多></a></Col>
-    <Col span="6">公司动态<a href="">更多></a></Col>
-    <Col span="6">最近案例<a href="">更多></a></Col>
-    <Col span="6">产品论道<a href="">更多></a></Col>
+    <Col span="6">网站公告<a href="javascript:void(0)" @click="more('RollingDisplayactive')">更多></a></Col>
+    <Col span="6">公司动态<a href="javascript:void(0)" @click="more('RollingDisplaynews')">更多></a></Col>
+    <Col span="6">最近案例<a href="javascript:void(0)" @click="more('RollingDisplaycash')">更多></a></Col>
+    <Col span="6">产品论道<a href="javascript:void(0)" @click="more('RollingDisplayproduct')">更多></a></Col>
   </Row>
 
   <Row
@@ -21,9 +21,10 @@
         <div
           class="swiper-slide"
           v-for="item in RollingDisplayactive"
+          @click="itemHandle('RollingDisplayactive',item)"
         >
           <a
-            href=""
+            href="javascript:void(0)"
             target="_blank"
           >{{item.active | limitWord}}</a>
         </div>
@@ -36,9 +37,10 @@
         <div
           class="swiper-slide"
           v-for="item in RollingDisplaynews"
+          @click="itemHandle('RollingDisplaynews',item)"
         >
           <a
-            href=""
+            href="javascript:void(0)"
             target="_blank"
           >{{item.news | limitWord}}</a>
         </div>
@@ -51,9 +53,10 @@
         <div
           class="swiper-slide"
           v-for="item in RollingDisplaycash"
+          @click="itemHandle('RollingDisplaycash',item)"
         >
           <a
-            href=""
+            href="javascript:void(0)"
             target="_blank"
           >{{item.cash | limitWord}}</a>
         </div>
@@ -66,9 +69,10 @@
         <div
           class="swiper-slide"
           v-for="item in RollingDisplayproduct"
+          @click="itemHandle('RollingDisplayproduct',item)"
         >
           <a
-            href=""
+            href="javascript:void(0)"
             target="_blank"
           >{{item.product | limitWord}}</a>
         </div>
@@ -133,6 +137,12 @@ export default {
       let activeHight = $swiper.find(".swiper-slide").height();
       $swiper.height(activeHight);
       var mySwiper = new Swiper(`.${swiperClassName}`, options);
+    },
+    more(name){
+        this.$emit("on-more",name);                                 
+    },
+    itemHandle(name,item){
+        this.$emit("on-item",name,item);
     }
   },
   filters: {

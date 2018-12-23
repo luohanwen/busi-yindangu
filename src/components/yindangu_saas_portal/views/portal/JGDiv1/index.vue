@@ -5,7 +5,7 @@
         <YdgFooter></YdgFooter>
     </Layout>
     <BackTop></BackTop>
-    <RightInfo></RightInfo>
+    <RightInfo :telephone="telephone.current" @on-item="rightInfoItem"></RightInfo>
 </div>
 </template>
 <script>
@@ -24,7 +24,11 @@ export default {
         YdgFooter,
         RightInfo
     },
-    methods: {}
+    methods: {
+        rightInfoItem(name){
+            alert("我点击了:"+name);
+        }   
+    }
 };
 </script>
 <style scoped lang="less" src="./theme.less"></style>
